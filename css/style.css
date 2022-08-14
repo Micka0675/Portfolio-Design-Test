@@ -16,7 +16,6 @@ body{
     width: 100%;
     height: 200vh;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
 }
 
 body *{
@@ -66,7 +65,7 @@ header{
 
 /* Title */
 h1{
-    font-size: 100px;
+    font-size: 450%;
     font-family: 'halo.ttf';
     font-weight: 400;
     text-align: center;
@@ -108,7 +107,6 @@ h1{
     width: 50%;
     z-index:3;
     position: absolute;
-    top: 25%;
     right: 0;
     transform: rotate(45deg);
     animation: haloComes 2s forwards;
@@ -119,8 +117,6 @@ h1{
     z-index: 4;
     transform: rotate(140deg);
     position: absolute;
-    top: 15%;
-    right: -15%;
     animation: shoot1 5s infinite;
 }
 
@@ -129,8 +125,6 @@ h1{
     z-index: 4;
     transform: rotate(140deg);
     position: absolute;
-    top: 40%;
-    right: -15%;
     animation: shoot2 4s infinite;
 }
 
@@ -139,8 +133,6 @@ h1{
     z-index: 3;
     transform: rotate(170deg);
     position: absolute;
-    top: 75%;
-    right: -15%;
     animation: shoot3 6s infinite;
 }
 
@@ -149,8 +141,6 @@ h1{
     z-index: 3;
     transform: rotate(165deg);
     position: absolute;
-    top: 90%;
-    right: -15%;
     animation: shoot4 7s infinite;
 }
 
@@ -234,6 +224,14 @@ h1{
     margin-bottom: 5%;
 }
 
+.text-resp{
+    display: none;
+}
+
+.text-resp p{
+    animation:none;
+}
+
 .icons{
     width: 60%;
     text-align: center;
@@ -244,6 +242,124 @@ h1{
     font-size: 140%;
     text-align: right;
     font-family: 'Open Sans', sans-serif;
+}
+
+/* media queries */
+
+@media screen and (min-width:1000px) and (max-width:1920px){
+
+    h1{
+        font-size: 100px;
+    }
+
+    .crystal1,.crystal2,.crystal3,.crystal4{
+        display: none;
+        animation: none;
+    }
+
+    .major1{
+        width: 850px;
+    }
+
+    .head-major{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+
+    header{
+        height: 100vh;
+    }
+
+    .overlay{
+        background-size: cover;
+    }
+
+    h1{
+       font-size:300%;
+    }
+
+    .crystal1,.crystal2,.crystal3,.crystal4{
+        display: none;
+        animation: none;
+    }
+
+    .major1{
+        width: 105%;
+    }
+
+    .head-major{
+        display: none;
+    }
+
+    .overlay,.mask{
+        height: 100vh;
+    }
+
+    .mask{
+        filter: blur(10px);
+    }
+
+    .lol{
+        font-size:40px;
+        text-align: center;
+    }
+
+    .intro{
+
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .intro-left{
+        display: none;
+        
+    }
+
+    .text-resp{
+        width: 80%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .text-resp p{
+        font-size: 70px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 900;
+        animation: updown 10s infinite;
+        text-align: center;
+    }
+
+    .create,.text-create,.create1,.create2,.create3,.create4{
+        display: none;
+        animation: none;
+    }
+
+    .intro-right{
+        width: 100%;
+        height: 50vh;
+        justify-content: space-evenly;
+    }
+
+    .icons{
+        width: 90%;
+    }
+
+    .intro-right i{
+        font-size: 30px;
+    }
+
+    .desc-langages{
+        font-size: 20px;
+        text-align: center;
+        width: 80%;
+
+    }
+
+    
 }
 
 /* Keyframes */
@@ -304,12 +420,16 @@ h1{
 }
 
 @keyframes hideText{
-    100%{left:-100%;}
+    100%{left:-400%;}
 }
 
-@media screen and (min-width:1080px) {
-    
+@keyframes updown{
+    0%{color:black;}
+    50%{color: wheat;}
+    100%{color:rgb(14, 14, 14);}
 }
+
+
 
 
 
