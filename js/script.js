@@ -1,49 +1,34 @@
-// Déclaration imgHeader en tant que tableau 
-var imgHeader = [];
-var createText = [];
-
-// Affectation des classes "imgHeader" à imgHeader
-imgHeader = document.getElementsByClassName("imgHeader");
-createText = document.getElementsByClassName("text-create");
-
-// affectation d'un event au scroll qui déclenche une fonction
-document.addEventListener('scroll',function()
+var titleCreate = document.getElementById('create');
+var lines = [] ;
+lines = document.getElementsByClassName('lines');
+console.log(window.scrollY);
+document.addEventListener('scroll', function()
 {
-    // Si la position Y au scroll est superieur à 1/10 de la taille d'ecran
-    if(window.scrollY > window.innerHeight/10)
+  if(window.scrollY == 0)
+  {
+    for(i = 0; i < lines.length; i++)
     {
-        // Ajout de la class imgHide aux elements  ciblés
-        imgHeader[0].classList.add('imgHide');
-        imgHeader[1].classList.add('imgHide2');
+        lines[i].classList.remove('lights-off');
+        lines[i].classList.add('lights');
     }
-    else
+  }
+  else
+  {
+    for(i = 0; i < lines.length; i++)
     {
-        // retrait de la class imgHide aux elements  ciblés
-        imgHeader[0].classList.remove('imgHide');
-        imgHeader[1].classList.remove('imgHide2');
+        lines[i].classList.add('lights-off');
+        lines[i].classList.remove('lights');
     }
+  }
+  if (window.scrollY > window.innerHeight)
+  {
+    titleCreate.classList.add('animate-header');
+    titleCreate.classList.remove('hide-header');
 
-    if(window.scrollY >= window.innerHeight){
-        for(i = 0 ; i < 4 ; i++ )
-        {
-            createText[i].classList.remove('create');
-
-        }
-        createText[0].classList.add('create1');
-        createText[1].classList.add('create2');
-        createText[2].classList.add('create3');
-        createText[3].classList.add('create4');
-    }
-    else
-    {
-        for(i = 0 ; i < 4 ; i++ )
-        {
-            createText[i].classList.add('create');
-        }
-        createText[0].classList.remove('create1');
-        createText[1].classList.remove('create2');
-        createText[2].classList.remove('create3');
-        createText[3].classList.remove('create4');
-    }
-})
-
+  }
+  else
+  {
+    titleCreate.classList.add('hide-header');
+    titleCreate.classList.remove('animate-header');
+  }
+});

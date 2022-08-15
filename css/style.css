@@ -14,8 +14,6 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 200vh;
-    overflow-x: hidden;
 }
 
 body *{
@@ -29,408 +27,231 @@ body *{
 
 header{
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh; 
+    background-color: rgb(9, 9, 9);  
     overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-/* Animate background */
-.overlay{
-    z-index: 1;
-    width: 300%;
-    height: 100vh;
-    position: relative;
-    animation: moveTitle 120s infinite;
-    background-image: url("../assets/images/land.webp");
-    background-size:contain;
-    background-repeat: repeat;
 }
 
 .mask{
-    background-color: rgba(0, 0, 0, 0.579);
-    z-index: 3;
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    backdrop-filter: blur(5px);
-    animation: opening 5s forwards;
-}
-
-/* Title */
-h1{
-    font-size: 450%;
-    font-family: 'halo.ttf';
-    font-weight: 400;
-    text-align: center;
-    color: aliceblue;
-    z-index: 4;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.lol{
-    font-family: 'Open Sans', sans-serif;
-    font-weight:lighter;
-    font-size: 35px;
-    color: aliceblue;
-    z-index: 4;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* animate images */
-
-.major1{
-    width: 50%;
-    z-index: 4;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    animation: spartanMove 2s forwards;
-}
-
-.head-major{
-    width: 50%;
-    z-index:3;
-    position: absolute;
-    right: 0;
-    transform: rotate(45deg);
-    animation: haloComes 2s forwards;
-}
-
-.crystal1{
-    width: 7%;
-    z-index: 4;
-    transform: rotate(140deg);
-    position: absolute;
-    animation: shoot1 5s infinite;
-}
-
-.crystal2{
-    width: 7%;
-    z-index: 4;
-    transform: rotate(140deg);
-    position: absolute;
-    animation: shoot2 4s infinite;
-}
-
-.crystal3{
-    width: 7%;
-    z-index: 3;
-    transform: rotate(170deg);
-    position: absolute;
-    animation: shoot3 6s infinite;
-}
-
-.crystal4{
-    width: 7%;
-    z-index: 3;
-    transform: rotate(165deg);
-    position: absolute;
-    animation: shoot4 7s infinite;
-}
-
-.imgHide{
-    animation: moveOut 2s forwards;
-}
-
-.imgHide2{
-    animation: moveOut2 2s forwards;
-}
-
-/* Bloc Intro */
-
-.intro{
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro-left{
-    width: 50%;
     height: 100%;
+    background-size:cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    translate: (-50%,-50%);
+    background-color: rgb(6, 6, 6);
+    filter: blur(15px);
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-.intro-left p{
-    color: wheat;
-    font-size: 500%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+/* Dynamics Elements Background */
+
+.ball1{
+    width: 480px;
+    height: 480px;
+    border-radius: 480px;
+    background: rgb(131,58,180);
+    background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+    position: relative;
+    animation: ballmove 30s infinite;
+}
+
+.ball2{
+    width: 280px;
+    height: 280px;
+    border-radius: 180px;
+    background: rgb(241,200,11);
+    background: -moz-linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    background: -webkit-linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    background: linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1c80b",endColorstr="#f0a708",GradientType=1);
+    position: relative;
+    animation: ballmove2 30s infinite;
+}
+
+/* Dynamic Lines */
+
+.lights{
+    position: relative;
+    z-index: 3;
+    left: -100%;
+    max-width: 491.17px;
+    height: 5px;
+    background-color: rgb(248, 251, 251);
+    animation: underline 2s forwards;
+}
+
+.lights-off{
+    position: relative;
+    z-index: 3;
+    left: -100%;
+    max-width: 491.17px;
+    height: 5px;
+    background-color: rgb(248, 251, 251);
+    animation: offline 2s forwards;
+}
+
+
+.txt-accueil{
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
-    position: relative;
+    font-size: 75px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
 }
 
-.create{
-    left: 5%;
-    animation: hideText 2s forwards;
+/* main */
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: wheat;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-.create1{
-    left: -100%;
-    animation: intro 2s forwards;
+/* langages */
+
+.langages{
+    width: 100%;
+    min-height:100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
 }
 
-.create2{
-    left: -150%;
-    animation: intro 2s forwards;
-}
-
-.create3{
-    left: -200%;
-    animation: intro 2s forwards;
-}
-
-.create4{
-    left: -250%;
-    animation: intro 2s forwards;
-}
-
-.intro-right{
-    width: 50%;
-    height: 100%;
+.lg-left{
+    width: 100%;
+    min-height: 50vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.intro-right i {
-    font-size: 350%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-}
-
-.text-resp{
-    display: none;
-}
-
-.text-resp p{
-    animation:none;
+    order: 1;
 }
 
 .icons{
-    width: 60%;
-    text-align: center;
+    font-size: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
-.desc-langages{
-    width: 80%;
-    font-size: 140%;
-    text-align: right;
+.description{
+    font-size: 25px;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    width: 80%;
 }
 
-/* media queries */
-
-@media screen and (min-width:1000px) and (max-width:1920px){
-
-    h1{
-        font-size: 100px;
-    }
-
-    .crystal1,.crystal2,.crystal3,.crystal4{
-        display: none;
-        animation: none;
-    }
-
-    .major1{
-        width: 850px;
-    }
-
-    .head-major{
-        display: none;
-    }
-
+.lg-right{
+    width: 100%;
+    min-height: 50vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 0;
 }
 
-@media screen and (max-width:1000px) {
-
-    header{
-        height: 100vh;
-    }
-
-    .overlay{
-        background-size: cover;
-    }
-
-    h1{
-       font-size:300%;
-    }
-
-    .crystal1,.crystal2,.crystal3,.crystal4{
-        display: none;
-        animation: none;
-    }
-
-    .major1{
-        width: 105%;
-    }
-
-    .head-major{
-        display: none;
-    }
-
-    .overlay,.mask{
-        height: 100vh;
-    }
-
-    .mask{
-        filter: blur(10px);
-    }
-
-    .lol{
-        font-size:40px;
-        text-align: center;
-    }
-
-    .intro{
-
-        height: 100vh;
-        flex-direction: column;
-    }
-
-    .intro-left{
-        display: none;
-        
-    }
-
-    .text-resp{
-        width: 80%;
-        height: 50vh;
-        display: flex;
-        align-items: center;
-    }
-
-    .text-resp p{
-        font-size: 70px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 900;
-        animation: updown 10s infinite;
-        text-align: center;
-    }
-
-    .create,.text-create,.create1,.create2,.create3,.create4{
-        display: none;
-        animation: none;
-    }
-
-    .intro-right{
-        width: 100%;
-        height: 50vh;
-        justify-content: space-evenly;
-    }
-
-    .icons{
-        width: 90%;
-    }
-
-    .intro-right i{
-        font-size: 30px;
-    }
-
-    .desc-langages{
-        font-size: 20px;
-        text-align: center;
-        width: 80%;
-
-    }
-
+.lg-right h2{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 75px;
+    width: 80%;
+    text-align: right;
     
 }
 
-/* Keyframes */
-
-@keyframes moveTitle {
-    0% {left: -100%;}
-    50% {left:100%;}
-    100% {left: -100%;}
-  }
-
-@keyframes spartanMove{
-    0% {left: -100%;}
-    100% {left: 5%;}
+.animate-header{
+    animation: showTitleRight 2s forwards;
+    position: relative;
 }
 
-@keyframes opening{
-    0% {background-color: black;}
-    100% {background-color: rgba(0, 0, 0, 0.613);}
+.hide-header{
+    animation: hideTitleRight 2s forwards;
+    position: relative;
 }
 
-@keyframes haloComes{
-    0% {right: -100%;}
-    100% {right: 5%;}
+@media screen and (max-width:650px){
+    .welcome {
+        font-size: 40px;
+    }
+
+    .lines{
+        max-width: 263.31px;
+    }
+
+    .lg-right h2{
+        font-size: 50px;
+    }
 }
 
-@keyframes shoot1 {
-    0% {right: -15%; top: 15%; filter: brightness(200%);}
-    100% {right: 200%; top: 122%; filter: brightness(100%);}
+
+/* keyframes */
+
+@keyframes underline{
+    0%{left:-100%;}
+    100%{left:0%;}
 }
 
-@keyframes shoot2 {
-    0% {right: -15%; top: 5%; filter: brightness(100%); color-interpolation-filters: linearRGB;}
-    100% {right: 200%; top: 90%; filter: brightness(200%);}
+@keyframes offline{
+    0%{left:0%;}
+    100%{left:-120%;}
 }
 
-@keyframes shoot3 {
-    0% {right: -15%; top: 75%; }
-    100% {right: 200%; top: 0%;}
+@keyframes ballmove{
+    0%{top: 0; right: 50%;}
+    
+    25%{top: 50%; right: 0%;}
+
+    50%{top: -20%; right: -50%;}
+
+    75%{top: -50%; right: 35%;}
+
+    100%{top: 0; right: 50%;}
 }
 
-@keyframes shoot4 {
-    0% {right: -15%; top: 75%; }
-    100% {right: 200%; top: 0%;}
+@keyframes ballmove2{
+    0%{top: 50%; right: 0%;}
+    
+    25%{ top: -50%; right: 50%;}
+
+    50%{ top: 50%; right: 35%;}
+
+    75%{ top: -50%; right: 15%;}
+
+    100%{top: 50%; right: 0%;}
 }
 
-@keyframes moveOut{
-    0% {left: 5%;}
-    100%{left:-200%;}
+@keyframes showTitleRight{
+    0%{right:-100%;}
+
+    100%{right:0%;}
 }
 
-@keyframes moveOut2{
-    0%{right: 0;}
+@keyframes hideTitleRight{
+    0%{right:0%;}
+    
     100%{right:-100%;}
 }
-
-@keyframes intro{
-    100%{left:10%;}
-}
-
-@keyframes hideText{
-    100%{left:-400%;}
-}
-
-@keyframes updown{
-    0%{color:black;}
-    50%{color: wheat;}
-    100%{color:rgb(14, 14, 14);}
-}
-
-
-
-
-
-
