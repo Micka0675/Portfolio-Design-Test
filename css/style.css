@@ -14,6 +14,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body *{
@@ -129,10 +130,13 @@ header{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;  
+    overflow-x: hidden;
+    
 }
 
 .welcome-container{
     width: 263.3px;
+    
 }
 
 /* carroussel div mask */
@@ -350,7 +354,7 @@ header{
     }
 
     .text-band > div > p{
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
