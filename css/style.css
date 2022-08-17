@@ -28,7 +28,7 @@ body *{
 header{
     width: 100%;
     min-height: 100vh; 
-    background-color: rgb(9, 9, 9);  
+    background-color: black;  
     overflow-x: hidden;
 }
 
@@ -45,7 +45,7 @@ header{
     top: 0;
     left: 0;
     translate: (-50%,-50%);
-    background-color: rgb(6, 6, 6);
+    background-color: black;
     filter: blur(15px);
     overflow-y: hidden;
     overflow-x: hidden;
@@ -142,6 +142,8 @@ header{
     height: 100px;
     overflow-x: hidden;
     overflow-y: hidden;
+    animation: blurEffect 4s infinite;
+    animation-delay: 1.50s; 
 }
 
 /* carrousel container */
@@ -152,7 +154,7 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     position: relative;
-    animation: moveWords 10s infinite;
+    animation: moveWords 40s infinite;
 }
 
 
@@ -166,8 +168,9 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: textEffect 2s infinite;
-    animation-delay: -1s;
+    animation: textEffect 8s infinite;
+    
+    /* animation-delay: -1s; */
 }
 
 
@@ -199,7 +202,7 @@ header{
 
 .lg-left{
     width: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -226,7 +229,7 @@ header{
 
 .lg-right{
     width: 100%;
-    min-height: 50vh;
+    min-height: 40vh;
     max-height: 100vh;
     display: flex;
     justify-content: center;
@@ -289,49 +292,37 @@ header{
     .lg-right,.lg-left{
         height: 100%;
     }
-}
 
-@media screen and (max-width:1150px){
+    .welcome-container > p{
+        width: 263.31px;
+    }
 
-    /* carroussel div mask */
-
-.carroussel-home{
-    width: 400px;
-    height: 100%;
-    overflow-x:visible;
-}
-
-/* carrousel container */
-.text-band{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: inherit;
-    animation: none;
-}
-
-/* carrousel elements */
-
-.item-1, .item-2, .item-3, .item-4,.item-5{
-    width: 100%;
     
-}
-
-.text-band > div > p{
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: right!important;
-}
 }
 
 @media screen and (max-width:1420px){
 
+    .welcome-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
     /* carroussel div mask */
 
-    .carroussel-home{
-        display: none;
+    .txt-accueil{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
     }
+
+    /* carroussel div mask */
+    .carroussel-home{
+        height: 100px;
+    }
+
+    
 
 }
 
@@ -352,6 +343,10 @@ header{
     .icons i {
         font-size: 35px;
     }
+
+    .text-band > div > p{
+        font-size: 40px;
+    }
 }
 
 @media screen and (min-width:650px){
@@ -368,13 +363,13 @@ header{
 /* keyframes */
 
 @keyframes underline{
-    0%{left:-100%;}
+    0%{left:-500%;}
     100%{left:0%;}
 }
 
 @keyframes offline{
     0%{left:0%;}
-    100%{left:-120%;}
+    100%{left:-500%;}
 }
 
 @keyframes moveWords {
@@ -386,12 +381,20 @@ header{
     100%{top:0%;}
 }
 
-@keyframes textEffect{
-    0%{filter: opacity(100%);filter:blur(20px);}
-    45%{filter: opacity(0%);filter:blur(0px);}
-    55%{filter: opacity(100%);filter:blur(0px);}
-    100%{filter: opacity(0%);filter:blur(20px);}
 
+
+@keyframes textEffect{
+    0%{filter: opacity(100%);}
+    10%{filter: opacity(0%);}
+    70%{filter: opacity(0%);}
+    100%{filter: opacity(100%);}
+
+}
+
+@keyframes blurEffect{
+    0%{filter:blur(15px);}
+    60%{filter:blur(0px);}
+    100%{filter:blur(15px);}
 }
 
 /* @keyframes textAppairs{
