@@ -20,7 +20,7 @@ document.addEventListener('scroll', function()
         lines[i].classList.remove('lights');
     }
   }
-  if (window.scrollY > window.innerHeight)
+  if (window.scrollY > window.innerHeight/1.7)
   {
     titleCreate.classList.add('animate-header');
     titleCreate.classList.remove('hide-header');

@@ -330,10 +330,15 @@ header{
 @media screen and (max-width:650px){
     .welcome {
         font-size: 40px;
+        width: 263.31px;
     }
 
     .lines{
-        max-width: 263.31px;
+        width: 263.31px;
+        height: 5px;
+        background-color: rgb(255, 252, 252);
+        z-index: 5;
+        
     }
 
     .lg-right h2{
@@ -352,6 +357,7 @@ header{
 @media screen and (min-width:650px){
     .lines{
         width: 500px;
+
     }
 
     .welcome{
