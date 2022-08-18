@@ -1,7 +1,37 @@
 var titleCreate = document.getElementById('create');
 var lines = [] ;
+var links = [];
+var lineText = document.getElementsByClassName("underlines");
 lines = document.getElementsByClassName('lines');
-console.log(window.scrollY);
+
+document.addEventListener('mouseover', showUnderline);
+
+function showUnderline(e){
+  if (e.target && e.target.id == "nameLink")
+  {
+    lineText[0].classList.add('lineText');
+    lineText[0].classList.remove('hideLineText');
+  }
+  if (e.target && e.target.id != "nameLink")
+  {
+    lineText[0].classList.add('hideLineText');
+    lineText[0].classList.remove('lineText');
+  }
+
+  if (e.target && e.target.id == "moreInfo")
+  {
+    lineText[1].classList.add('lineText');
+    lineText[1].classList.remove('hideLineText');
+  }
+
+  else
+  {
+    lineText[1].classList.add('hideLineText');
+    lineText[1].classList.remove('lineText');
+  }
+};
+
+
 document.addEventListener('scroll', function()
 {
   if(window.scrollY == 0)
@@ -32,3 +62,9 @@ document.addEventListener('scroll', function()
     titleCreate.classList.remove('animate-header');
   }
 });
+
+
+
+
+
+

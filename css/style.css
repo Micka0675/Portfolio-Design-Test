@@ -18,10 +18,13 @@ body{
 }
 
 body *{
-    color: wheat;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+a:hover{
+    cursor: pointer;
 }
 
 /* Header */
@@ -31,7 +34,69 @@ header{
     min-height: 100vh; 
     background-color: black;  
     overflow-x: hidden;
+    color: white;
 }
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    height:100px;
+    color: wheat;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.nav-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name, .en-savoir-plus{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.name a, .en-savoir-plus a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* default links without underlines */
+
+.underlines{
+    width: 100%;
+    height: 2px;
+    background-color: wheat;
+    position: relative;
+    left: -100%;
+}
+
+/* dynamic links underlines */
+
+.lineText{
+    position: relative;
+    animation: showUnderline 1s forwards;
+}
+
+.hideLineText{
+    position: relative;
+    animation: hideUnderline 1s forwards;
+}
+
 
 .mask{
     width: 100%;
@@ -103,7 +168,7 @@ header{
     left: -100%;
     max-width: 491.17px;
     height: 5px;
-    background-color: rgb(248, 251, 251);
+    background-color: wheat;
     animation: underline 2s forwards;
 }
 
@@ -113,7 +178,7 @@ header{
     left: -100%;
     max-width: 491.17px;
     height: 5px;
-    background-color: rgb(248, 251, 251);
+    background-color: wheat;
     animation: offline 2s forwards;
 }
 
@@ -193,6 +258,7 @@ header{
     background-color: black;
     overflow-y: hidden;
     overflow-x: hidden;
+    color: aliceblue;
 }
 
 /* langages */
@@ -222,6 +288,7 @@ header{
     align-items: center;
     flex-wrap: wrap;
     width: 70%;
+    color: wheat;
 }
 
 .description{
@@ -282,7 +349,7 @@ header{
     }
 
     .lines{
-        max-width: 263.31px;
+        max-width: 275px;
     }
 
     .lg-right h2{
@@ -298,7 +365,7 @@ header{
     }
 
     .welcome-container > p{
-        width: 263.31px;
+        width: 275px;
     }
 
     
@@ -334,13 +401,12 @@ header{
 @media screen and (max-width:650px){
     .welcome {
         font-size: 40px;
-        width: 263.31px;
+        width: 275px;
     }
 
     .lines{
-        width: 263.31px;
+        width: 275px;
         height: 5px;
-        background-color: rgb(255, 252, 252);
         z-index: 5;
         
     }
@@ -354,6 +420,7 @@ header{
     }
 
     .text-band > div > p{
+        
         font-size: 30px;
     }
 }
@@ -372,6 +439,20 @@ header{
 
 /* keyframes */
 
+/* navbar underline */
+
+@keyframes showUnderline{
+    0%{left: -100%;}
+    100%{left: 0%;}
+}
+
+@keyframes hideUnderline {
+    0%{left:0%;}
+    100%{left: -100%;}
+}
+
+/* title underline */
+
 @keyframes underline{
     0%{left:-500%;}
     100%{left:0%;}
@@ -381,6 +462,8 @@ header{
     0%{left:0%;}
     100%{left:-500%;}
 }
+
+/* list words */
 
 @keyframes moveWords {
     0%{top:0%;}
@@ -420,6 +503,9 @@ header{
     100%{filter: opacity(0%);filter:blur(20px);}
 } */
 
+
+/* balls movement */
+
 @keyframes ballmove{
     0%{top: 0; right: 50%;}
     
@@ -455,6 +541,8 @@ header{
 
     100%{top: -50%; right: 15%;}
 }
+
+/* animate h2 */
 
 @keyframes showTitleRight{
     0%{right:-100%;}
