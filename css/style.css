@@ -179,7 +179,7 @@ header{
     left: 0;
     translate: (-50%,-50%);
     background-color: black;
-    filter: blur(15px);
+/*     filter: blur(15px); */
     overflow-y: hidden;
     overflow-x: hidden;
 }
