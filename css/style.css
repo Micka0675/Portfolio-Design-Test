@@ -582,7 +582,7 @@ header{
     
 }
 
-@media screen and (max-width:380px){
+@media screen and (max-width:400px){
     .welcome-container{
         width: 170px;
         display: flex;
@@ -608,7 +608,6 @@ header{
     }
 
     .lg-right{
-        background-color: aqua;
         height: auto;
         min-height: auto;
     }
@@ -619,7 +618,6 @@ header{
 
     .lg-left{
         height: auto;
-        background-color: blueviolet;
     }
 
     .description p{
