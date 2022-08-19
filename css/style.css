@@ -398,6 +398,10 @@ header{
     
 }
 
+.title-lg-right{
+    display: none;
+}
+
 .animate-header{
     animation: showTitleRight 2s forwards;
     position: relative;
@@ -418,11 +422,13 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    animation: blocanimeshadow 3s forwards;
+    animation: blocanimeshadow 1s forwards;
+
 }
 
 .bloc-anime-reveal{
-    animation: blocanimereveal 6s forwards;
+    animation: blocanimereveal 1s forwards;
+
 }
 
 .title-bloc{

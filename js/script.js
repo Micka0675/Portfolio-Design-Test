@@ -62,7 +62,7 @@ function showUnderline(e){
 document.addEventListener('scroll', function()
 {
 
-  if(window.scrollY == 0)
+  if(window.scrollY == 0) 
   {
     for(i = 0; i < lines.length; i++)
     {
@@ -80,6 +80,7 @@ document.addEventListener('scroll', function()
   }
   if (window.scrollY > window.innerHeight/1.7)
   {
+    titleCreate.style.display = 'block';
     titleCreate.classList.add('animate-header');
     titleCreate.classList.remove('hide-header');
     navBarMask.style.visibility = "visible";
@@ -102,7 +103,7 @@ document.addEventListener('scroll', function()
     animateTitleLeft.classList.add('hide-animate-header-left');
     animateTitleLeft.classList.remove('animate-header-left');
   }
-  if (window.scrollY >= window.innerHeight * 2){
+  if (window.scrollY >= 2*window.innerHeight){
     blocResp.classList.add('bloc-anime-reveal');
   }
   else
