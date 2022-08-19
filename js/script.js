@@ -2,7 +2,7 @@ var titleCreate = document.getElementById('create');
 var animateTitleLeft = document.getElementById('create2');
 var navBarMask = document.getElementById('maskNavbarBlur');
 var landing = document.getElementById('landing');
-// var wrapper = document.getElementById('wrapper');
+var blocResp = document.getElementById('blocResp');
 var lines = [] ;
 // var links = [];
 var lineText = document.getElementsByClassName('underlines');
@@ -101,6 +101,13 @@ document.addEventListener('scroll', function()
   {
     animateTitleLeft.classList.add('hide-animate-header-left');
     animateTitleLeft.classList.remove('animate-header-left');
+  }
+  if (window.scrollY >= window.innerHeight * 2){
+    blocResp.classList.add('bloc-anime-reveal');
+  }
+  else
+  {
+    blocResp.classList.remove('bloc-anime-reveal');
   }
 });
 
