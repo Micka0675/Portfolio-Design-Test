@@ -556,9 +556,9 @@ header{
 }
 
 @media screen and (min-width:650px){
-    .lines{
+    .lights{
+        max-width: 500px;
         width: 500px;
-
     }
 
     .welcome{
