@@ -198,6 +198,7 @@ header{
     background: linear-gradient(90deg, rgba(244,11,11,1) 0%, rgba(158,31,42,1) 55%, rgba(252,176,69,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f40b0b",endColorstr="#fcb045",GradientType=1);
     position: relative;
+    -webkit-animation: ballmove 30s infinite;
     animation: ballmove 30s infinite;
 }
 
@@ -211,6 +212,7 @@ header{
     background: linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1c80b",endColorstr="#f0a708",GradientType=1);
     position: relative;
+    -webkit-animation: ballmove2 30s infinite;
     animation: ballmove2 30s infinite;
 }
 
@@ -224,6 +226,7 @@ header{
     background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
     position: relative;
+    -webkit-animation: ballmove3 30s infinite;
     animation: ballmove3 30s infinite;
 }
 
@@ -690,6 +693,18 @@ header{
     100%{top: 0; right: 50%;}
 }
 
+@-webkit-keyframes ballmove{
+    0%{top: 0; right: 50%;}
+    
+    25%{top: 50%; right: 0%;}
+
+    50%{top: -20%; right: -50%;}
+
+    75%{top: -50%; right: 35%;}
+
+    100%{top: 0; right: 50%;}
+}
+
 @keyframes ballmove2{
     0%{top: 50%; right: 0%;}
     
@@ -702,7 +717,31 @@ header{
     100%{top: 50%; right: 0%;}
 }
 
+@-webkit-keyframes ballmove2{
+    0%{top: 50%; right: 0%;}
+    
+    25%{ top: -50%; right: 50%;}
+
+    50%{ top: 50%; right: 35%;}
+
+    75%{ top: -50%; right: 15%;}
+
+    100%{top: 50%; right: 0%;}
+}
+
 @keyframes ballmove3{
+    0%{top: -50%; right: 15%;}
+    
+    25%{ top: 25%; right: -50%;}
+
+    50%{ top: -35%; right: 35%;}
+
+    75%{ top: 20%; right: -15%;}
+
+    100%{top: -50%; right: 15%;}
+}
+
+@-webkit-keyframes ballmove3{
     0%{top: -50%; right: 15%;}
     
     25%{ top: 25%; right: -50%;}
