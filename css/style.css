@@ -198,8 +198,8 @@ header{
     background: linear-gradient(90deg, rgba(244,11,11,1) 0%, rgba(158,31,42,1) 55%, rgba(252,176,69,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f40b0b",endColorstr="#fcb045",GradientType=1);
     position: relative;
-    -webkit-animation: ballmove 30s infinite;
     animation: ballmove 30s infinite;
+    -webkit-animation: ballmove 30s infinite;
 }
 
 .ball2{
@@ -212,8 +212,8 @@ header{
     background: linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1c80b",endColorstr="#f0a708",GradientType=1);
     position: relative;
-    -webkit-animation: ballmove2 30s infinite;
     animation: ballmove2 30s infinite;
+    -webkit-animation: ballmove2 30s infinite;
 }
 
 .ball3{
@@ -226,8 +226,8 @@ header{
     background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
     position: relative;
-    -webkit-animation: ballmove3 30s infinite;
     animation: ballmove3 30s infinite;
+    -webkit-animation: ballmove3 30s infinite;
 }
 
 /* Dynamic Lines */
