@@ -1,7 +1,7 @@
 var titleCreate = document.getElementById('create');
 var animateTitleLeft = document.getElementById('create2');
 var navBarMask = document.getElementById('maskNavbarBlur');
-// var loading = document.getElementById('loading');
+var landing = document.getElementById('landing');
 // var wrapper = document.getElementById('wrapper');
 var lines = [] ;
 // var links = [];
@@ -10,8 +10,20 @@ lines = document.getElementsByClassName('lines');
 
 
 // landing
-window.addEventListener('load', landingDispairs);
-function landingDispairs(){
+window.addEventListener('load', animations);
+
+function animations(){
+    wrapperAppairs();
+    hideLanding();
+}
+
+function hideLanding(){
+  setTimeout(function(){
+    landing.style.display = 'none';
+  }, 9000);
+}
+
+function wrapperAppairs(){
   setTimeout(function(){
     wrapper.style.display = 'block';
    }, 7000);
