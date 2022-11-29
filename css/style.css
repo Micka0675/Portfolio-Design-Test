@@ -506,6 +506,129 @@ header{
     animation: hideHeaderLeft 2s forwards;
 }
 
+/* Realisations */
+.title-real{
+    display: flex;
+    justify-content: center;
+}
+
+
+.title-real h2{
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.reals-shadow{
+    animation: blocanimeshadow 1s forwards;
+}
+
+.reals{
+    min-height: calc(100vh - 150px);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.bloc-real{
+    width: 200px;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom:25px ;
+    border: solid black 2px;
+    transition: 0.3s;
+    flex: -0.5% 0 33.333333%;
+    overflow: hidden;
+}
+
+.bloc-real:hover{
+    border: solid wheat 2px;
+    cursor: pointer;
+}
+
+.head-real,.bot-real{
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.head-real{
+    top: -100%;
+}
+
+/* .head-real-alt{
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:0;
+} */
+
+.bot-real{
+    bottom: -100%;
+}
+
+/* .bot-real-alt{
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} */
+
+.bloc-real-1{
+    background-image: url("../assets/images/f23.webp");
+}
+
+.bloc-real-2{
+    background-image: url("../assets/images/Juriste.webp");
+}
+
+.bloc-real-3{
+    background-image: url("../assets/images/grapheus.webp");
+}
+
+.bloc-real-4{
+    background-image: url("../assets/images/arboriste06.webp  ");
+}
+
+.bloc-real-5{
+    background-image: url("../assets/images/opht.webp");
+}
+
+.bloc-real-6{
+    background-image: url("../assets/images/riviera.webp");
+}
 @media screen and (max-height:1034px){
     
     .txt-accueil{
@@ -914,4 +1037,24 @@ header{
 @keyframes blocanimeshadow{
     0%{background-color: wheat;}
     100%{background-color: black;}
+}
+
+@keyframes headcomes{
+    0%{top:-100%;}
+    100%{top:0%;}
+}
+
+@keyframes headremoves{
+    0%{top:0%;}
+    100%{top:-100%;}
+}
+
+@keyframes botcomes{
+    0%{bottom:-100%;}
+    100%{bottom:0%;}
+}
+
+@keyframes botremoves{
+    0%{bottom:0%;}
+    100%{bottom:-100%;}
 }
