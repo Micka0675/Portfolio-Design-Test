@@ -430,10 +430,10 @@ header{
 
 }
 
-/* .bloc-anime-reveal{
+.bloc-anime-reveal{
     animation: blocanimereveal 1s forwards;
 
-} */
+}
 
 .title-bloc{
     width: 100%;
@@ -527,9 +527,9 @@ header{
     text-align: center;
 }
 
-/* .reals-shadow{
+.reals-shadow{
     animation: blocanimeshadow 1s forwards;
-} */
+}
 
 .reals{
     min-height: calc(100vh - 150px);
@@ -544,6 +544,10 @@ header{
 .bloc-real{
     width: 200px;
     height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -555,9 +559,12 @@ header{
     flex: -0.5% 0 33.333333%;
     overflow: hidden;
 }
+.bloc-real a{
+    width: 100%;
+}
 
 .bloc-real:hover{
-    border: solid wheat 2px;
+    
     cursor: pointer;
     animation: changeborderdelay 0.5s forwards;
 }
@@ -1077,3 +1084,64 @@ header{
          filter: drop-shadow( 0px 15px 15px);
         }
 }
+
+@keyframes bggreen{
+    0%{background-color: black;}
+    100%{background-color: green;}
+}
+
+@keyframes bggreentoshad{
+    0%{background-color: green;}
+    100%{background-color: black;}
+}
+
+@keyframes bgred{
+    0%{background-color: black;}
+    100%{background-color: red;}
+}
+
+@keyframes bgredtoshad{
+    0%{background-color: red;}
+    100%{background-color: black;}
+}
+
+@keyframes bgyellow{
+    0%{background-color: black;}
+    100%{background-color: yellow;}
+}
+
+@keyframes bgyellowtoshad{
+    0%{background-color: yellow;}
+    100%{background-color: black;}
+}
+
+@keyframes bgpurple{
+    0%{background-color: black;}
+    100%{background-color: purple;}
+}
+
+@keyframes bgpurpletoshad{
+    0%{background-color: purple;}
+    100%{background-color: black;}
+}
+
+@keyframes bgblue{
+    0%{background-color: black;}
+    100%{background-color: blue;}
+}
+
+@keyframes bgbluetoshad{
+    0%{background-color: blue;}
+    100%{background-color: black;}
+}
+
+@keyframes bgorange{
+    0%{background-color: black;}
+    100%{background-color: orange;}
+}
+
+@keyframes bgorangetoshad{
+    0%{background-color: orange;}
+    100%{background-color: black;}
+}
+

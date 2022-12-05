@@ -162,7 +162,8 @@ for (i = 0; i < blocReal.length; i++ )
             document.getElementsByClassName('head-real')[j].style.animation = 'headcomes 0.8s forwards';
             document.getElementsByClassName('bot-real')[j].style.animation = 'botcomes 0.8s forwards';
             anime[j] = true;
-            document.getElementsByClassName('reals')[0].style.backgroundColor = colors[j];
+            document.getElementById('blocResp2').classList.remove('reals-shadow');
+            document.getElementsByClassName('reals')[0].style.animation = 'bg'+ colors[j] +' 1s forwards';
             // e.target.children[1].classList.add('bot-real-alt');
             // e.target.children[1].classList.remove('bot-real');
           }
@@ -189,6 +190,10 @@ for (i = 0; i < blocReal.length; i++ )
           // e.target.children[1].classList.add('bot-real-alt');
           // e.target.children[1].classList.remove('bot-real');
           anime[j] = false;
+          document.getElementById('blocResp2').classList.add('reals-shadow');
+          document.getElementsByClassName('reals')[0].style.animation = 'bg'+ colors[j] +'toshad 1s forwards';
+
+          // document.getElementsByClassName('reals')[0].style.animation = 'none';
         }
       
     }
