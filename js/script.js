@@ -11,6 +11,7 @@ var botReal = document.getElementsByClassName('bot-real');
 var blocReal = document.getElementsByClassName('bloc-real');
 var anime = [];
 var compteur = 0;
+var colors = ['green','yellow','purple','red','blue','orange'];
 
 for (i = 0; i < blocReal.length; i++ )
 {
@@ -161,6 +162,7 @@ for (i = 0; i < blocReal.length; i++ )
             document.getElementsByClassName('head-real')[j].style.animation = 'headcomes 0.8s forwards';
             document.getElementsByClassName('bot-real')[j].style.animation = 'botcomes 0.8s forwards';
             anime[j] = true;
+            document.getElementsByClassName('reals')[0].style.backgroundColor = colors[j];
             // e.target.children[1].classList.add('bot-real-alt');
             // e.target.children[1].classList.remove('bot-real');
           }

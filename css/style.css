@@ -23,6 +23,10 @@ body *{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 a:hover{
     cursor: pointer;
 }
@@ -426,10 +430,10 @@ header{
 
 }
 
-.bloc-anime-reveal{
+/* .bloc-anime-reveal{
     animation: blocanimereveal 1s forwards;
 
-}
+} */
 
 .title-bloc{
     width: 100%;
@@ -523,9 +527,9 @@ header{
     text-align: center;
 }
 
-.reals-shadow{
+/* .reals-shadow{
     animation: blocanimeshadow 1s forwards;
-}
+} */
 
 .reals{
     min-height: calc(100vh - 150px);
@@ -555,17 +559,20 @@ header{
 .bloc-real:hover{
     border: solid wheat 2px;
     cursor: pointer;
+    animation: changeborderdelay 0.5s forwards;
 }
 
 .head-real,.bot-real{
     width: 100%;
     height: 50%;
-    background-color: grey;
-    color: black;
+    background-color: black;
+    color: wheat;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     position: relative;
 }
@@ -1057,4 +1064,16 @@ header{
 @keyframes botremoves{
     0%{bottom:0%;}
     100%{bottom:-100%;}
+}
+
+@keyframes changeborderdelay{
+    0%{border:solid wheat 2px;
+       color: wheat;
+       
+    }
+    100%{border:solid rgb(76, 75, 75) 2px;
+         color:rgb(76, 75, 75);
+         -webkit-filter: drop-shadow(0px 15px 15px) wheat;
+         filter: drop-shadow( 0px 15px 15px);
+        }
 }
