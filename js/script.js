@@ -11,7 +11,7 @@ var botReal = document.getElementsByClassName('bot-real');
 var blocReal = document.getElementsByClassName('bloc-real');
 var anime = [];
 var compteur = 0;
-var colors = ['green','yellow','purple','red','blue','orange'];
+var colors = ['black','black','black','black','black','black'];
 
 for (i = 0; i < blocReal.length; i++ )
 {
@@ -185,8 +185,8 @@ for (i = 0; i < blocReal.length; i++ )
         while(anime[j] === true && e.target === blocReal[j] && compteur < 2 && rideau === false && illus === true)
         {
           
-          document.getElementsByClassName('head-real')[j].style.animation = 'headremoves 0.8s forwards';
-          document.getElementsByClassName('bot-real')[j].style.animation = 'botremoves 0.8s forwards';
+          document.getElementsByClassName('head-real')[j].style.animation = 'headremoves forwards';
+          document.getElementsByClassName('bot-real')[j].style.animation = 'botremoves  forwards';
           // e.target.children[1].classList.add('bot-real-alt');
           // e.target.children[1].classList.remove('bot-real');
           anime[j] = false;
