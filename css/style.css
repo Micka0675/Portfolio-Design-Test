@@ -23,6 +23,32 @@ body *{
     padding: 0;
 }
 
+label{
+    color: wheat;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input{
+    border-radius: 6px;
+    border:solid wheat 1px;
+    background-color: rgb(54, 54, 54) ;
+    color: white;
+    height: 28px;
+}
+
+input::placeholder{
+    color: rgb(179, 179, 179);
+    font-style: italic;
+    text-align: center;
+    
+}
+
+input:focus {
+    outline: none;
+    border:1px solid rgb(243, 239, 239);
+    box-shadow: 0 0 10px #719ECE;
+}
+
 a{
     text-decoration: none;
 }
@@ -575,7 +601,7 @@ header{
     background-color: black;
     color: wheat;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
+    font-weight: 300;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -586,6 +612,10 @@ header{
 
 .head-real{
     top: -100%;
+}
+
+.head-real p, .bot-real p{
+    width: 90%;
 }
 
 /* .head-real-alt{
@@ -643,6 +673,81 @@ header{
 .bloc-real-6{
     background-image: url("../assets/images/riviera.webp");
 }
+
+/* contact */
+
+
+.bloc-contact{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.bloc-contact h2{
+color: white;
+font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    width: 100%;
+    max-height: 20vh;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    min-height: 60%;
+    overflow-x: hidden;
+}
+
+.contact a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact a:visited, .contact a:active, .contact a:link{
+    color: wheat;
+
+}
+
+.contact a i{
+    width: 20%;
+}
+
+.contact a p{
+    width: 80%;
+    text-align: left;
+}
+
+.input-comes-left{
+    position: relative;
+    left:-100%;
+    color: wheat;
+}
+
+.input-comes-right{
+    position: relative;
+    right: -100%; 
+}
+
+.animate-header-left-2{
+    animation:  removeAnimLeft 1s forwards;
+}
+
+.animate-header-right-2{
+    animation:  removeAnimRight 1s forwards;
+}
+
+
 @media screen and (max-height:1034px){
     
     .txt-accueil{
@@ -1143,5 +1248,15 @@ header{
 @keyframes bgorangetoshad{
     0%{background-color: orange;}
     100%{background-color: black;}
+}
+
+@keyframes removeAnimLeft{
+    0%{left: 0%;}
+    100%{left: -100%;}
+}
+
+@keyframes removeAnimRight{
+    0%{right: 0%;}
+    100%{right: -100%;}
 }
 

@@ -9,6 +9,10 @@ var animatetitle3 = document.getElementById('create3');
 var headReal = document.getElementsByClassName('head-real');
 var botReal = document.getElementsByClassName('bot-real');
 var blocReal = document.getElementsByClassName('bloc-real');
+var inputLeft = document.getElementsByClassName('input-comes-left');
+var inputRight = document.getElementsByClassName('input-comes-right');
+console.log(inputLeft[0].classList,inputRight[0].classList);
+console.log(headReal);
 var anime = [];
 var compteur = 0;
 var colors = ['black','black','black','black','black','black'];
@@ -18,7 +22,7 @@ for (i = 0; i < blocReal.length; i++ )
   anime.push(false);
 }
 
-console.log(headReal);
+
 // var botReal = document.getElementById('botReal');
 var lines = [] ;
 // var links = [];
@@ -145,7 +149,35 @@ document.addEventListener('scroll', function()
     titleResp.classList.add('bloc-anime-reveal');
     titleResp.classList.remove('reals-shadow');
   }
+  if(window.scrollY >= 4*window.innerHeight)
+  {
+    for(i = 0;i<inputLeft.length;i++)
+    {
+      inputLeft[i].classList.add('animate-header-left');
+      inputLeft[i].classList.remove('animate-header-left-2');
+    }
+    for(i=0;i<inputRight.length;i++)
+    {
+      inputRight[i].classList.add('animate-header');
+      inputRight[i].classList.remove('animate-header-right-2');
+    }
+  }
+  if(window.scrollY < 3.8*window.innerHeight)
+  {
+    for(i = 0;i<inputLeft.length;i++)
+    {
+      inputLeft[i].classList.remove('animate-header-left');
+      inputLeft[i].classList.add('animate-header-left-2');
+
+    }
+    for(i=0;i<inputRight.length;i++)
+    {
+      inputRight[i].classList.remove('animate-header');
+      inputRight[i].classList.add('animate-header-right-2');
+    }
+  }
 });
+
 var rideau = false;
 var illus = false;
 
