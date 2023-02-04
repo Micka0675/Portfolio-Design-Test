@@ -117,22 +117,24 @@ document.addEventListener('scroll', function()
     navBarMask.style.transition = "0.5s";
     navbar.style.transition = "0.5s"
   }
-  if (window.scrollY > (2*window.innerHeight)-(window.innerHeight/1.7))
-  {
-    animateTitleLeft.style = 'transform:translateX(0%)';
+  // if (window.scrollY > (2*window.innerHeight)-(window.innerHeight/1.7))
+  // {
+  //   animateTitleLeft.style = 'transform:translateX(0%)';
     
 
-  }
-  else
-  {
-    animateTitleLeft.style = 'transform:translateX(-100%)';
-  }
+  // }
+  // else
+  // {
+  //   animateTitleLeft.style = 'transform:translateX(-100%)';
+  // }
   if (window.scrollY >= 2*window.innerHeight){
     blocResp.classList.add('bloc-anime-reveal');
+    animateTitleLeft.style = 'transform:translateX(0%)';
   }
   else
   {
     blocResp.classList.remove('bloc-anime-reveal');
+    animateTitleLeft.style = 'transform:translateX(-100%)';
   }
   if(window.scrollY >= 2.7*window.innerHeight)
   {

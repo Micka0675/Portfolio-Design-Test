@@ -449,6 +449,7 @@ header{
 .animate-header{
     animation: showTitleRight 2s forwards;
     position: relative;
+    text-align: right;
 }
 
 .hide-header{
@@ -538,6 +539,7 @@ header{
     width: 80%;
     max-height: 20vh;
     text-align: left;
+    transition :2s;
 }
 
 .animate-header-left{
@@ -928,6 +930,9 @@ footer{
 
 
 @media screen and (max-width:650px){
+    .welcome-container{
+        width: 274px;
+    }
     .welcome {
         font-size: 40px;
         width: 275px;
@@ -969,11 +974,11 @@ footer{
 
     .contact a {
         font-size: 35px;
-        width: 60%;
     }
 
     .contact a i{
         width: 40%;
+        text-align: center;
     }
 
     
@@ -1002,7 +1007,7 @@ footer{
     }
 
     .welcome-container{
-        width: 170px;
+        width: 169px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1063,7 +1068,6 @@ footer{
 
     .contact a {
         font-size: 120%;
-        width: 60%;
         margin-bottom: 0;
     }
 
