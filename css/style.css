@@ -23,9 +23,8 @@ body *{
     padding: 0;
 }
 
-label{
-    color: wheat;
-    font-family: 'Open Sans', sans-serif;
+::-webkit-scrollbar{
+    display: none;
 }
 
 input{
@@ -275,14 +274,15 @@ header{
 .lights{
     position: relative;
     z-index: 3;
-    left: -100%;
+    left: 0%;
     max-width: 491.17px;
     height: 5px;
     background-color: wheat;
-    animation: underline 2s forwards;
+    transition: 0.5s;
+
 }
 
-.lights-off{
+/* .lights-off{
     position: relative;
     z-index: 3;
     left: -100%;
@@ -290,7 +290,7 @@ header{
     height: 5px;
     background-color: wheat;
     animation: offline 2s forwards;
-}
+} */
 
 .txt-accueil{
     font-family: 'Open Sans', sans-serif;
@@ -404,6 +404,7 @@ header{
 .icons i, .icons div{
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .icons div{
@@ -541,13 +542,13 @@ header{
 
 .animate-header-left{
     position: relative;
-    animation: animateHeaderLeft 2s forwards;
+    right:100%
 }
 
-.hide-animate-header-left{
+/* .hide-animate-header-left{
     position: relative;
     animation: hideHeaderLeft 2s forwards;
-}
+} */
 
 /* Realisations */
 .title-real{
@@ -688,7 +689,16 @@ header{
 }
 
 /* contact */
+.bloc-foot{
+    width: 100%;
+    height: calc(100vh - 80px);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
+}
 
 .bloc-contact{
     display:flex;
@@ -699,8 +709,8 @@ header{
 }
 
 .bloc-contact h2{
-color: white;
-font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 50px;
@@ -744,12 +754,13 @@ font-family: 'Open Sans', sans-serif;
 .input-comes-left{
     position: relative;
     left:-100%;
-    color: wheat;
+    transition:2s
 }
 
 .input-comes-right{
     position: relative;
     right: -100%; 
+    transition:2s
 }
 
 .animate-header-left-2{
@@ -760,6 +771,19 @@ font-family: 'Open Sans', sans-serif;
     animation:  removeAnimRight 1s forwards;
 }
 
+footer{
+    color: wheat;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    height: 80px;
+}
+
+.design-by{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-height:800px){
     
@@ -1103,7 +1127,7 @@ font-family: 'Open Sans', sans-serif;
 
 /* title underline */
 
-@keyframes underline{
+/* @keyframes underline{
     0%{left:-500%;}
     100%{left:0%;}
 }
@@ -1111,7 +1135,7 @@ font-family: 'Open Sans', sans-serif;
 @keyframes offline{
     0%{left:0%;}
     100%{left:-500%;}
-}
+} */
 
 /* list words */
 
@@ -1242,7 +1266,7 @@ font-family: 'Open Sans', sans-serif;
     100%{right:-100%;}
 }
 
-@keyframes animateHeaderLeft{
+/* @keyframes animateHeaderLeft{
     0%{left:-100%;}
 
     100%{left:0%;}
@@ -1252,7 +1276,7 @@ font-family: 'Open Sans', sans-serif;
     0%{left:0%;}
     
     100%{left:-100%;}
-}
+} */
 
 @keyframes blocanimereveal{
     0%{background-color: black;}

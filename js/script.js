@@ -1,6 +1,7 @@
 var titleCreate = document.getElementById('create');
 var animateTitleLeft = document.getElementById('create2');
 var navBarMask = document.getElementById('maskNavbarBlur');
+var navbar = document.getElementById('navbar');
 var landing = document.getElementById('landing');
 var blocResp = document.getElementById('blocResp');
 var blocResp2 = document.getElementById('blocResp2');
@@ -87,16 +88,14 @@ document.addEventListener('scroll', function()
   {
     for(i = 0; i < lines.length; i++)
     {
-        lines[i].classList.remove('lights-off');
-        lines[i].classList.add('lights');
+        lines[i].style = 'transform: translateX(0%)';
     }
   }
   else
   {
     for(i = 0; i < lines.length; i++)
     {
-        lines[i].classList.add('lights-off');
-        lines[i].classList.remove('lights');
+      lines[i].style = 'transform: translateX(-100%)';
     }
   }
   if (window.scrollY > window.innerHeight/1.7)
@@ -104,25 +103,29 @@ document.addEventListener('scroll', function()
     titleCreate.style.display = 'block';
     titleCreate.classList.add('animate-header');
     titleCreate.classList.remove('hide-header');
-    navBarMask.style.visibility = "visible";
-
+    navbar.style = "transform:translateY(-100%)";
+    navbar.style.transition = "0.5s";
+    navBarMask.style = "transform:translateY(-100%)";
+    navBarMask.style.transition = "0.5s";
   }
   else
   {
     titleCreate.classList.add('hide-header');
     titleCreate.classList.remove('animate-header');
-    navBarMask.style.visibility = "hidden";
+    navbar.style = "transform:translateY(0%)";
+    navBarMask.style = "transform:translateY(0%)";
+    navBarMask.style.transition = "0.5s";
+    navbar.style.transition = "0.5s"
   }
   if (window.scrollY > (2*window.innerHeight)-(window.innerHeight/1.7))
   {
-    animateTitleLeft.classList.add('animate-header-left');
-    animateTitleLeft.classList.remove('hide-animate-header-left');
+    animateTitleLeft.style = 'transform:translateX(0%)';
+    
 
   }
   else
   {
-    animateTitleLeft.classList.add('hide-animate-header-left');
-    animateTitleLeft.classList.remove('animate-header-left');
+    animateTitleLeft.style = 'transform:translateX(-100%)';
   }
   if (window.scrollY >= 2*window.innerHeight){
     blocResp.classList.add('bloc-anime-reveal');
@@ -153,27 +156,24 @@ document.addEventListener('scroll', function()
   {
     for(i = 0;i<inputLeft.length;i++)
     {
-      inputLeft[i].classList.add('animate-header-left');
-      inputLeft[i].classList.remove('animate-header-left-2');
+      inputLeft[i].style = 'transform:translateX(100%)';
+      
     }
     for(i=0;i<inputRight.length;i++)
     {
-      inputRight[i].classList.add('animate-header');
-      inputRight[i].classList.remove('animate-header-right-2');
+      inputRight[i].style = 'transform:translateX(-100%)';
     }
   }
   if(window.scrollY < 3.8*window.innerHeight)
   {
     for(i = 0;i<inputLeft.length;i++)
     {
-      inputLeft[i].classList.remove('animate-header-left');
-      inputLeft[i].classList.add('animate-header-left-2');
+      inputLeft[i].style = 'transform:translateX(-100%)';
 
     }
     for(i=0;i<inputRight.length;i++)
     {
-      inputRight[i].classList.remove('animate-header');
-      inputRight[i].classList.add('animate-header-right-2');
+      inputRight[i].style = 'transform:translateX(100%)';
     }
   }
 });
@@ -194,8 +194,6 @@ for (i = 0; i < blocReal.length; i++ )
             document.getElementsByClassName('head-real')[j].style.animation = 'headcomes 0.8s forwards';
             document.getElementsByClassName('bot-real')[j].style.animation = 'botcomes 0.8s forwards';
             anime[j] = true;
-            document.getElementById('blocResp2').classList.remove('reals-shadow');
-            document.getElementsByClassName('reals')[0].style.animation = 'bg'+ colors[j] +' 1s forwards';
             // e.target.children[1].classList.add('bot-real-alt');
             // e.target.children[1].classList.remove('bot-real');
           }
@@ -222,8 +220,6 @@ for (i = 0; i < blocReal.length; i++ )
           // e.target.children[1].classList.add('bot-real-alt');
           // e.target.children[1].classList.remove('bot-real');
           anime[j] = false;
-          document.getElementById('blocResp2').classList.add('reals-shadow');
-          document.getElementsByClassName('reals')[0].style.animation = 'bg'+ colors[j] +'toshad 1s forwards';
 
           // document.getElementsByClassName('reals')[0].style.animation = 'none';
         }
