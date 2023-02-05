@@ -164,7 +164,7 @@ header{
 }
 
 .name, .en-savoir-plus{
-    height: 25%;
+    min-height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -310,8 +310,16 @@ header{
 }
 
 .welcome-container{
-    width: 263.3px;
+    width: 520px;
     
+}
+
+.welcome{
+    width: 520px;
+}
+
+.lines{
+    width: 520px;
 }
 
 /* carroussel div mask */
@@ -805,18 +813,18 @@ footer{
     }
     
     .ball1{
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 200px;
     }
 
     .ball2{
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 200px;
     }
 
     .ball3{
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 200px;
     }
 
     .welcome {
@@ -869,6 +877,18 @@ footer{
     }
 }
 
+@media screen and (min-width:600px) and (max-width:1420px)
+{
+    .lights{
+        max-width: 500px;
+        width: 500px;
+    }
+
+    .welcome{
+        width: 500px;
+    }
+}
+
 @media screen and (max-width:1420px){
 
     .welcome-container{
@@ -876,7 +896,12 @@ footer{
         flex-direction: column;
         align-items: center;
         overflow-x: hidden;
-        width: 500px;
+        width: 350px;
+        font-size: 52px;
+    }
+
+    .lines,.welcome{
+        width: 350px;
     }
     /* carroussel div mask */
 
@@ -1015,23 +1040,24 @@ footer{
     }
 
     .welcome-container{
-        width: 169px;
+        width: 68%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: initial;
     }
 
     .welcome-container p{
-        width: 170px;
+        width: 100%;
     }
 
     .welcome{
-        width: 70%;
-        font-size: 25px;
+        width: 100%;
+        font-size: 8vw;
     } 
     .lines{
-        width: 170px;
+        width: 100%;
     }
 
     .langages{
@@ -1098,16 +1124,6 @@ footer{
     .contact a i{
         width: 40%;
         font-size: 120%;
-    }
-}
-@media screen and (min-width:650px){
-    .lights{
-        max-width: 500px;
-        width: 500px;
-    }
-
-    .welcome{
-        width: 500px;
     }
 }
 
