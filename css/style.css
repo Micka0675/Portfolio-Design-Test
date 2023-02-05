@@ -413,7 +413,7 @@ header{
 .description{
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
+    text-align: left;
     width: 80%;
 }
 
@@ -487,7 +487,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     order:3;
 }
 
@@ -1040,7 +1040,7 @@ footer{
     }
 
     .text-content-data{
-        width: 90%;
+        width: 80%;
     }
 
     .txt-anime-data{
@@ -1205,6 +1205,10 @@ footer{
 {
     video{
         width: 900%;
+    }
+
+    .txt-anime-data p{
+        font-size: 7vw;
     }
 }
 
