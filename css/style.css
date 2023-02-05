@@ -563,6 +563,8 @@ video{
     left: 100%;
     transform: translate(-50%,-50%);
     z-index: 0;
+    /* filter:blur(2px);
+    opacity: 0.5; */
 }
 
 .text-content-data{
@@ -589,12 +591,18 @@ video{
     text-transform: uppercase;
     align-items: center;
     font-size: 30px;
+    background-color: black;
+}
+
+.title-bloc-data h2{
+    margin: 15px;
 }
 
 .txt-anime-data{
     width: 80%;
     font-size: 25px;
     background-color: black;
+    margin: 15px;
 }
 
 
@@ -1280,20 +1288,6 @@ footer{
     60%{filter:blur(0px);}
     100%{filter:blur(15px);}
 }
-
-/* @keyframes textAppairs{
-    0%{filter: opacity(100%);filter:blur(20px);}
-    45%{filter: opacity(0%);filter:blur(0px);}
-
-}
-
-@keyframes textDispairs{
-    0%{filter: opacity(100%);filter:blur(20px);}
-    45%{filter: opacity(0%);filter:blur(0px);}
-    55%{filter: opacity(100%);filter:blur(0px);}
-    100%{filter: opacity(0%);filter:blur(20px);}
-} */
-
 
 /* balls movement */
 
