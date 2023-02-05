@@ -901,7 +901,20 @@ footer{
     
 }
 
+@media screen and (max-height:323px){
+    .navbar,.mask-navbar-blur{
+        visibility: hidden;
+    }
 
+    .welcome-container{
+        margin-top: 25px;
+    }
+
+    .ball1,.ball2,.ball3{
+        width: 80px;
+        height: 80px;
+    }
+}
 
 @media screen and (max-height:406px)
 {
@@ -917,6 +930,28 @@ footer{
         width: 23%;
     }
 }
+@media screen and (min-height:323px ) and (max-height:640px){
+    .welcome-container{
+        margin-top: 100px;
+    }
+
+    .ball1{
+        width: 120px;
+        height: 120px;
+    }
+
+    .ball2{
+        width: 150px;
+        height: 150px;
+    }
+
+    .ball3{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
 
 @media screen and (min-height:406px ) and (max-height:640px)
 {
@@ -977,28 +1012,10 @@ footer{
         width: 210px;
     }
 
-    .welcome-container{
-        margin-top: 100px;
-    }
+    
 
     .welcome{
         font-size: 35px;
-    }
-
-
-    .ball1{
-        width: 120px;
-        height: 120px;
-    }
-
-    .ball2{
-        width: 150px;
-        height: 150px;
-    }
-
-    .ball3{
-        width: 80px;
-        height: 80px;
     }
 
     .animation{
