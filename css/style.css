@@ -602,7 +602,6 @@ header{
     margin-bottom:25px ;
     border: solid black 2px;
     transition: 0.3s;
-    flex: -0.5% 0 33.333333%;
     overflow: hidden;
     margin-left: 25px;
     margin-right: 25px;
