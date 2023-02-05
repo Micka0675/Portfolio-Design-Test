@@ -901,6 +901,131 @@ footer{
     
 }
 
+@media screen and (max-height:406px)
+{
+    .phone{
+        width: 10%;
+    }
+
+    .tablette{
+        width: 13%;
+    }
+
+    .pc{
+        width: 23%;
+    }
+}
+
+@media screen and (min-height:406px ) and (max-height:640px)
+{
+    .phone{
+        width: 15%;
+    }
+
+    .tablette{
+        width: 18%;
+    }
+
+    .pc{
+        width: 28%;
+    }
+
+}
+
+@media screen and (max-height:641px)
+{
+    .langages{
+        height: 100vh;
+    }
+
+    .lg-right h2,.title-bloc h2,.title-bloc-data h2,.title-real h2,.bloc-contact h2{
+        font-size: 35px;
+    }
+
+    .icons{
+        font-size: 35px;
+    }
+
+    .icons div{
+        width: 35px;
+    }
+
+    .lg-right{
+        height: 5%;
+
+    }
+
+    .lg-left{
+        height: 95%;
+        min-height: 0vh;
+        justify-content: center;
+    }
+
+    p,.txt-anime p{
+        font-size: 15px;
+    }
+
+    .txt-accueil{
+        flex-direction: row;
+    }
+
+    .welcome-container,.welcome-container > p,.welcome,.lines,.lights{
+        width: 210px;
+    }
+
+    .welcome-container{
+        margin-top: 100px;
+    }
+
+    .welcome{
+        font-size: 35px;
+    }
+
+
+    .ball1{
+        width: 120px;
+        height: 120px;
+    }
+
+    .ball2{
+        width: 150px;
+        height: 150px;
+    }
+
+    .ball3{
+        width: 80px;
+        height: 80px;
+    }
+
+    .animation{
+        width: 60%;
+    }
+
+    .contact a{
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-height:641px) and (max-height:800px){
+
+    .txt-accueil{
+        flex-direction: row;
+    }
+
+    
+    .phone{
+        width: 10%;
+    }
+
+    .tablette{
+        width: 13%;
+    }
+
+    .pc{
+        width: 13%;
+    }
+}
+
 @media screen and (min-height:800px) and (max-height:1034px){
     .ball1{
         width: 170px;
@@ -916,6 +1041,18 @@ footer{
         width: 280px;
         height: 280px;
     }
+
+    .phone{
+        width: 15%;
+    }
+
+    .tablette{
+        width: 18%;
+    }
+
+    .pc{
+        width: 28%;
+    }
 }
 
 @media screen and (min-width:600px) and (max-width:1420px)
@@ -930,7 +1067,7 @@ footer{
     }
 }
 
-@media screen and (max-width:1420px){
+@media screen and (min-height:641px) and (max-width:1420px){
 
     .welcome-container{
         display: flex;
@@ -947,8 +1084,6 @@ footer{
     /* carroussel div mask */
 
     .txt-accueil{
-        flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
         height: 100vh;
     }
@@ -972,7 +1107,9 @@ footer{
     }
 } */
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1051px){
+    
+
     .loading-box{
         width: 90%;
         height: 50px;
