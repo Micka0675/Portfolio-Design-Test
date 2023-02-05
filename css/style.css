@@ -1062,12 +1062,39 @@ footer{
         width: 500px;
     }
 
+
     .welcome{
         width: 500px;
     }
 }
 
-@media screen and (min-height:641px) and (max-width:1420px){
+@media screen and (min-height:641px) and (max-height:850px){
+
+    .txt-accueil{
+        flex-direction: row;
+    }
+
+    .welcome-container,.welcome-container > p,.welcome,.lines,.lights{
+        width: 210px;
+    }
+
+    .welcome-container{
+        margin-top: 100px;
+    }
+
+    .welcome{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:1420px){
+    .txt-accueil{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-height:850px) and (max-width:1420px){
 
     .welcome-container{
         display: flex;
