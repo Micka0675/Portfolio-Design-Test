@@ -136,7 +136,7 @@ document.addEventListener('scroll', function()
     blocResp.classList.remove('bloc-anime-reveal');
     animateTitleLeft.style = 'transform:translateX(-100%)';
   }
-  if(window.scrollY >= 2.7*window.innerHeight)
+  if(window.scrollY >= 3.7*window.innerHeight)
   {
     animatetitle3.classList.add('animate-header');
     animatetitle3.classList.remove('hide-header');

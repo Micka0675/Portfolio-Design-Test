@@ -11,6 +11,7 @@ body{
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body *{
@@ -278,16 +279,6 @@ header{
 
 }
 
-/* .lights-off{
-    position: relative;
-    z-index: 3;
-    left: -100%;
-    max-width: 491.17px;
-    height: 5px;
-    background-color: wheat;
-    animation: offline 2s forwards;
-} */
-
 .txt-accueil{
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
@@ -551,10 +542,61 @@ header{
     right:100%
 }
 
-/* .hide-animate-header-left{
+/* data bloc */
+
+.bloc-anime-data{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     position: relative;
-    animation: hideHeaderLeft 2s forwards;
-} */
+}
+
+video{
+    width: 200%;
+    height: 200%;
+    position: relative;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+
+.text-content-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    color: #f5deb3;
+   
+}
+
+.title-bloc-data{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 30px;
+}
+
+.txt-anime-data{
+    width: 80%;
+    font-size: 25px;
+    background-color: black;
+}
+
 
 /* Realisations */
 .title-real{
@@ -951,6 +993,13 @@ footer{
     }
 }
 
+@media screen and (max-width:900px)
+{
+    video{
+        width: 400%;
+    }
+}
+
 
 
 @media screen and (max-width:650px){
@@ -975,6 +1024,20 @@ footer{
 
     .title-bloc h2 {
         font-size: 50px;
+    }
+
+    .title-bloc-data{
+        width: 100%;
+        font-size: 7vw;
+    }
+
+    .text-content-data{
+        width: 90%;
+    }
+
+    .txt-anime-data{
+        width: 100%;
+        font-size: 20px;
     }
 
     
@@ -1022,6 +1085,13 @@ footer{
     }
 
     
+}
+
+@media screen and (max-width:461px)
+{
+    video{
+        width: 600%;
+    }
 }
 
 @media screen and (max-width:400px){
@@ -1113,8 +1183,20 @@ footer{
     }
 
     .contact a i{
-        width: 40%;
+        width: 50%;
         font-size: 120%;
+    }
+
+    .contact a p{
+        width: 50%;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:310px)
+{
+    video{
+        width: 900%;
     }
 }
 
