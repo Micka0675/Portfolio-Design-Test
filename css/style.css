@@ -367,6 +367,10 @@ header{
     color: aliceblue;
 }
 
+.main > div:not(.title-real){
+    min-height: 100vh;
+}
+
 /* langages */
 
 .langages{
@@ -457,7 +461,7 @@ header{
 
 .bloc-anime{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     color: black;
     display: flex;
     flex-direction: column;
@@ -574,7 +578,6 @@ iframe{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -760,7 +763,7 @@ iframe{
 /* contact */
 .bloc-foot{
     width: 100%;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     color: black;
     display: flex;
     flex-direction: column;
@@ -889,7 +892,7 @@ footer{
     }
 
     .langages{
-        height: 600px;
+        min-height: 600px;
     }
 
     .lg-right,.lg-left{
@@ -1263,10 +1266,6 @@ footer{
         font-size: 7vw;
     }
 
-    /* .text-content-data{
-        width: 80%;
-    } */
-
     .txt-anime-data{
         width: 100%;
         font-size: 20px;
@@ -1317,6 +1316,16 @@ footer{
     }
 
     
+}
+
+@media screen and (max-width:600px)
+{
+    .bloc-anime{
+        overflow-y: none;
+    }
+    .animation{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:461px)
@@ -1440,15 +1449,6 @@ footer{
     }
 }
 
-
-/* keyframes */
-
-/* landing page */
-/* @keyframes landing{
-    90%{visibility: aliceblue;visibility:visible}
-    100%{background-color: aqua;visibility: hidden;}
-}*/
-
 @keyframes opening{
     /* 0%{top: 50%;left:50%;transform: translate(-50%,-50%);} */
     100%{height: 0px;}
@@ -1481,20 +1481,6 @@ footer{
     0%{left:0%;}
     100%{left: -100%;}
 }
-
-/* title underline */
-
-/* @keyframes underline{
-    0%{left:-500%;}
-    100%{left:0%;}
-}
-
-@keyframes offline{
-    0%{left:0%;}
-    100%{left:-500%;}
-} */
-
-/* list words */
 
 @keyframes moveWords {
     0%{top:0%;}
