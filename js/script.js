@@ -12,18 +12,19 @@ var botReal = document.getElementsByClassName('bot-real');
 var blocReal = document.getElementsByClassName('bloc-real');
 var inputLeft = document.getElementsByClassName('input-comes-left');
 var inputRight = document.getElementsByClassName('input-comes-right');
-console.log(inputLeft[0].classList,inputRight[0].classList);
-console.log(headReal);
+var classMatrix = [];
+var archive = [];
+
+console.log(classMatrix);
 var anime = [];
 var compteur = 0;
-var colors = ['black','black','black','black','black','black'];
 
 for (i = 0; i < blocReal.length; i++ )
 {
   anime.push(false);
 }
 
-
+console.log(classMatrix);
 // var botReal = document.getElementById('botReal');
 var lines = [] ;
 // var links = [];
@@ -37,6 +38,7 @@ window.addEventListener('load', animations);
 function animations(){
     wrapperAppairs();
     hideLanding();
+    matrixEffect();
 }
 
 function hideLanding(){
@@ -50,6 +52,45 @@ function wrapperAppairs(){
     wrapper.style.display = 'block';
    }, 7000);
 }
+
+function matrixEffect(){
+  setInterval(function(){
+    
+    eleMatrix = document.getElementsByClassName('matrix');
+    classMatrix = [];
+    for(i=0;i<document.getElementsByClassName('matrix')[0].classList.length;i++)
+    {
+      classMatrix.push(document.getElementsByClassName('matrix')[0].classList[i]);
+    }
+    console.log(classMatrix);
+    for(i=0;i<eleMatrix.length;i++)
+    {
+      var leftPos = Math.floor(Math.random()*(100)+1);
+      var speedAnim = Math.floor(Math.random()*(4)+1);
+      for(j=0;j<classMatrix.length;j++)
+      {
+       
+        console.log(classMatrix[j]);
+        if(classMatrix[j] == 'matrix-down')
+        {
+          document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
+          if(document.getElementsByClassName('matrix')[i].getBoundingClientRect()!= document.getElementsByClassName('matrix')[i].style['left'])
+          {
+            document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
+          }
+          document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
+          document.getElementsByClassName('matrix')[i].style['transition'] = speedAnim+'s';
+          document.getElementsByClassName('matrix')[i].classList.add('matrix-reset');
+          document.getElementsByClassName('matrix')[i].classList.remove('matrix-down');
+          
+        } 
+      }
+    }
+    archive = [];
+    // console.log(document.getElementsByClassName('matrix')[0].classList);
+  },4000);
+  
+};
 
 // mouse over animations
 document.addEventListener('mouseover', showUnderline);
