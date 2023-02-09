@@ -12,20 +12,18 @@ var botReal = document.getElementsByClassName('bot-real');
 var blocReal = document.getElementsByClassName('bloc-real');
 var inputLeft = document.getElementsByClassName('input-comes-left');
 var inputRight = document.getElementsByClassName('input-comes-right');
+var eleMatrix = document.getElementsByClassName('matrix');
 var classMatrix = [];
 var archive = [];
-var colorDiv = [];
-colorDiv = ['color1','color2','color3'];
-console.log(classMatrix);
+var colorDiv = ['color1','color2','color3'];
 var anime = [];
 var compteur = 0;
+var animReady = true;
 
 for (i = 0; i < blocReal.length; i++ )
 {
   anime.push(false);
 }
-
-console.log(classMatrix);
 // var botReal = document.getElementById('botReal');
 var lines = [] ;
 // var links = [];
@@ -54,27 +52,25 @@ function wrapperAppairs(){
    }, 7000);
 }
 
+
+
+for(neo = 0;neo<eleMatrix.length;neo++)
+{
+  // Code for Safari 3.1 to 6.0
+  eleMatrix[7].addEventListener("webkitTransitionEnd", matrixEffect);
+
+  // Standard syntax
+  eleMatrix[7].addEventListener("transitionend", matrixEffect);
+}
+
+matrixEffect();
+
 function matrixEffect(){
-  var animAtrix=setInterval(function(){
-    
-    eleMatrix = document.getElementsByClassName('matrix');
-    classMatrix = [];
-    for(i=0;i<document.getElementsByClassName('matrix')[0].classList.length;i++)
-    {
-      classMatrix.push(document.getElementsByClassName('matrix')[0].classList[i]);
-    }
-    console.log(classMatrix);
+  if(animReady === true)
+  {
     for(i=0;i<eleMatrix.length;i++)
     {
-      document.getElementsByClassName('matrix')[i].style['left'] = '0s';
-      document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
-      document.getElementsByClassName('matrix')[i].classList.remove('matrix-reset');
-      document.getElementsByClassName('matrix')[i].classList.add('matrix-down');
-      var leftPos = Math.floor(Math.random()*(100)+1);
-      var speedAnim = Math.floor(Math.random()*(4)+1);
       var colorAnim = Math.floor(Math.random()*(3)+0);
-      console.log(colorDiv[colorAnim]);
-
       for(j=0;j<classMatrix.length;j++)
       {
         if(classMatrix[j].startsWith('color'))
@@ -82,27 +78,89 @@ function matrixEffect(){
           document.getElementsByClassName('matrix')[i].classList.remove(classMatrix[j]);
           document.getElementsByClassName('matrix')[i].classList.add(colorDiv[colorAnim]);
         }
-        console.log(classMatrix[j]);
-        if(classMatrix[j] == 'matrix-down')
-        {
-          document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
-          if(document.getElementsByClassName('matrix')[i].getBoundingClientRect()!= document.getElementsByClassName('matrix')[i].style['left'])
-          {
-            document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
-          }
-          document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
-          document.getElementsByClassName('matrix')[i].style['transition'] = speedAnim+'s';
-          document.getElementsByClassName('matrix')[i].classList.add('matrix-reset');
-          document.getElementsByClassName('matrix')[i].classList.remove('matrix-down');
-          
-        } 
       }
     }
-    archive = [];
-    // console.log(document.getElementsByClassName('matrix')[0].classList);
-  },4000);
+    setInterval(function(){
+      
+      eleMatrix = document.getElementsByClassName('matrix');
+      classMatrix = [];
+      for(z=0;z<eleMatrix.length;z++)
+      {
+        for(i=0;i<document.getElementsByClassName('matrix')[z].classList.length;i++)
+        {
+          classMatrix.push(document.getElementsByClassName('matrix')[z].classList[i]);
+        }
+      }
+      for(i=0;i<eleMatrix.length;i++)
+      {
+        var leftPos = Math.floor(Math.random()*(100)+1);
+        var speedAnim = Math.floor(Math.random()*(22)+1);
+        var colorAnim = Math.floor(Math.random()*(3)+0);
+        var archiveLeftpos = [];
+        archiveLeftpos.push(leftPos);
+        for(j=0;j<classMatrix.length;j++)
+        {
+          if(classMatrix[j] == 'matrix-down')
+          {
+            var control = false;
+            while(control === false)
+            for(v = 0;v<archiveLeftpos.length;v++)
+            {
+              
+              if(leftPos == archiveLeftpos[v])
+              {
+                control = false;
+              }
+              else
+              {
+                control = true;
+              }
+              if(control === false)
+              {
+                leftPos = Math.floor(Math.random()*(100)+1);
+              }
+            }
+            document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
+            if(document.getElementsByClassName('matrix')[i].getBoundingClientRect() != document.getElementsByClassName('matrix')[i].style['left'])
+            {
+              document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
+            }
+            
+            
+            document.getElementsByClassName('matrix')[i].style['left'] = leftPos+'%';
+            document.getElementsByClassName('matrix')[i].style['transition'] = speedAnim+'s';
+            document.getElementsByClassName('matrix')[7].style['transition'] = '22s';
+            document.getElementsByClassName('matrix')[i].classList.add('matrix-reset');
+            document.getElementsByClassName('matrix')[i].classList.remove('matrix-down');
+            animReady = false;
+          }
+        }
+        
+      }
+      
+    },8000); 
+  } 
   
-};
+  else
+  {
+    for(i=0;i<eleMatrix.length;i++)
+    {
+      for(j=0;j<classMatrix.length;j++)
+      {
+        if(classMatrix[j] == 'matrix-reset')
+        {
+          document.getElementsByClassName('matrix')[i].style['left'] = '0s';
+          document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
+          document.getElementsByClassName('matrix')[i].classList.remove('matrix-reset');
+          document.getElementsByClassName('matrix')[i].classList.add('matrix-down');
+          animReady = true;
+        }
+      }
+      
+    }
+  }
+}
+  
 
 // mouse over animations
 document.addEventListener('mouseover', showUnderline);
@@ -189,6 +247,7 @@ document.addEventListener('scroll', function()
     blocResp.classList.remove('bloc-anime-reveal');
     animateTitleLeft.style = 'transform:translateX(-100%)';
   }
+
   if(window.scrollY >= 3.7*window.innerHeight)
   {
     animatetitle3.classList.add('animate-header');

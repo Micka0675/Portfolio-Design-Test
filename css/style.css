@@ -577,9 +577,8 @@ header{
 }
 
 .matrix{
-    width: 2px;
+    width: 1px;
     height: 100%;
-    background-color: rgb(200, 245, 179);
     position: absolute;
     top: 100%;
     border-radius: 12px;
@@ -591,6 +590,10 @@ header{
 
 .matrix-reset{
     top: 100%;
+}
+
+.the-one{
+    visibility: hidden;
 }
 
 .color1{
