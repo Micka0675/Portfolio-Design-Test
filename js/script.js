@@ -14,7 +14,8 @@ var inputLeft = document.getElementsByClassName('input-comes-left');
 var inputRight = document.getElementsByClassName('input-comes-right');
 var classMatrix = [];
 var archive = [];
-
+var colorDiv = [];
+colorDiv = ['color1','color2','color3'];
 console.log(classMatrix);
 var anime = [];
 var compteur = 0;
@@ -54,7 +55,7 @@ function wrapperAppairs(){
 }
 
 function matrixEffect(){
-  setInterval(function(){
+  var animAtrix=setInterval(function(){
     
     eleMatrix = document.getElementsByClassName('matrix');
     classMatrix = [];
@@ -65,11 +66,22 @@ function matrixEffect(){
     console.log(classMatrix);
     for(i=0;i<eleMatrix.length;i++)
     {
+      document.getElementsByClassName('matrix')[i].style['left'] = '0s';
+      document.getElementsByClassName('matrix')[i].style['transition'] = '0s';
+      document.getElementsByClassName('matrix')[i].classList.remove('matrix-reset');
+      document.getElementsByClassName('matrix')[i].classList.add('matrix-down');
       var leftPos = Math.floor(Math.random()*(100)+1);
       var speedAnim = Math.floor(Math.random()*(4)+1);
+      var colorAnim = Math.floor(Math.random()*(3)+0);
+      console.log(colorDiv[colorAnim]);
+
       for(j=0;j<classMatrix.length;j++)
       {
-       
+        if(classMatrix[j].startsWith('color'))
+        {
+          document.getElementsByClassName('matrix')[i].classList.remove(classMatrix[j]);
+          document.getElementsByClassName('matrix')[i].classList.add(colorDiv[colorAnim]);
+        }
         console.log(classMatrix[j]);
         if(classMatrix[j] == 'matrix-down')
         {

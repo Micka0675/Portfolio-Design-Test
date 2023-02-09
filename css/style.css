@@ -238,7 +238,6 @@ header{
     animation: ballmove 30s infinite;
     -webkit-animation: ballmove 30s infinite;
 }
-
 .ball2{
     width: 280px;
     height: 280px;
@@ -558,9 +557,9 @@ header{
     top: 0;
     left: 0;
     /* translate: (-50%,-50%); */
-    background-color: black;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* filter: blur(2px);
+    -webkit-filter: blur(2px); */
     transform: translate3d(0, 0, 0);
     overflow-y: hidden;
     overflow-x: hidden;
@@ -578,12 +577,12 @@ header{
 }
 
 .matrix{
-    width: 1px;
+    width: 2px;
     height: 100%;
-    background-color: #f5f6f5;
+    background-color: rgb(200, 245, 179);
     position: absolute;
     top: 100%;
-    transition: 0s;
+    border-radius: 12px;
 }
 
 .matrix-down{
@@ -592,6 +591,29 @@ header{
 
 .matrix-reset{
     top: 100%;
+}
+
+.color1{
+    background: rgb(244,11,11);
+    background: -moz-linear-gradient(90deg, rgba(244,11,11,1) 0%, rgba(158,31,42,1) 55%, rgba(252,176,69,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(244,11,11,1) 0%, rgba(158,31,42,1) 55%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg, rgba(244,11,11,1) 0%, rgba(158,31,42,1) 55%, rgba(252,176,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f40b0b",endColorstr="#fcb045",GradientType=1);
+}
+
+.color2{
+    background: rgb(241,200,11);
+    background: -moz-linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    background: -webkit-linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    background: linear-gradient(90deg, rgba(241,200,11,1) 24%, rgba(195,103,10,1) 53%, rgba(240,167,8,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1c80b",endColorstr="#f0a708",GradientType=1);
+}
+
+.color3{
+    background: rgb(63,94,251);
+    background: -moz-linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 /* iframe{
@@ -617,20 +639,20 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    color: #f5deb3;
+    color: #f8f7f5;
    
 }
 
 .title-bloc-data{
-    width: 100%;
-    height: 40%;
+    /* width: 100%;
+    height: 40%; */
     display: flex;
     justify-content: center;
     text-align: left;
     text-transform: uppercase;
     align-items: center;
     font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.431);
+    background-color: rgba(0, 0, 0, 0.541);
 }
 
 .title-bloc-data h2{
@@ -639,10 +661,10 @@ header{
 }
 
 .txt-anime-data{
-    width: 100%;
-    height: 60%;
+    /* width: 100%;
+    height: 60%; */
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.433);
+    background-color: rgba(0, 0, 0, 0.596);
 }
 
 .txt-anime-data p{
