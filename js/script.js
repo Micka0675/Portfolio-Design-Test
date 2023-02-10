@@ -80,7 +80,7 @@ function matrixEffect(){
         }
       }
     }
-    setInterval(function(){
+    var matrixInterv = setInterval(function(){
       
       eleMatrix = document.getElementsByClassName('matrix');
       classMatrix = [];
@@ -137,7 +137,9 @@ function matrixEffect(){
         }
         
       }
-      
+     if (animReady === false) {
+        clearInterval(matrixInterv);
+     }
     },8000); 
   } 
   
