@@ -137,8 +137,8 @@ function matrixEffect(){
         }
         
       }
-     if (animReady === false) {
-        clearInterval(matrixInterv);
+//      if (animReady === false) {
+//         clearInterval(matrixInterv);
      }
     },8000); 
   } 
