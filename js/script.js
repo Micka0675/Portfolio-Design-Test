@@ -80,7 +80,7 @@ function matrixEffect(){
         }
       }
     }
-    var matrixInterv = setInterval(function(){
+    setInterval(function(){
       
       eleMatrix = document.getElementsByClassName('matrix');
       classMatrix = [];
@@ -137,14 +137,12 @@ function matrixEffect(){
         }
         
       }
-//      if (animReady === false) {
-//         clearInterval(matrixInterv);
-     }
     },8000); 
+    
   } 
-  
   else
   {
+  
     for(i=0;i<eleMatrix.length;i++)
     {
       for(j=0;j<classMatrix.length;j++)
@@ -158,8 +156,8 @@ function matrixEffect(){
           animReady = true;
         }
       }
-      
     }
+      
   }
 }
   
