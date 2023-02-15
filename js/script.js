@@ -13,6 +13,8 @@ var blocReal = document.getElementsByClassName('bloc-real');
 var inputLeft = document.getElementsByClassName('input-comes-left');
 var inputRight = document.getElementsByClassName('input-comes-right');
 var eleMatrix = document.getElementsByClassName('matrix');
+var carouselElem = document.getElementsByClassName('car-elem');
+var animate = document.getElementsByClassName('animation')[0];
 var classMatrix = [];
 var archive = [];
 var colorDiv = ['color1','color2','color3'];
@@ -218,6 +220,9 @@ document.addEventListener('scroll', function()
     navbar.style.transition = "0.5s";
     navBarMask.style = "transform:translateY(-100%)";
     navBarMask.style.transition = "0.5s";
+    setInterval(function(){
+      carouselElem[0].style = 'transform:translateX(-%)';
+    },2000);
   }
   else
   {
@@ -241,6 +246,7 @@ document.addEventListener('scroll', function()
   if (window.scrollY >= 2*window.innerHeight){
     blocResp.classList.add('bloc-anime-reveal');
     animateTitleLeft.style = 'transform:translateX(0%)';
+
   }
   else
   {
