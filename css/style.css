@@ -590,15 +590,12 @@ header{
 }
 
 .matrix{
-    width: 1px;
-    height: 100%;
-    position: absolute;
-    top: 100%;
     border-radius: 12px;
 }
 
 .matrix-down{
     top: -100%;
+    
 }
 
 .matrix-reset{
