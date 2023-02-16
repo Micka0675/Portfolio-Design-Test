@@ -41,6 +41,7 @@ function animations(){
     wrapperAppairs();
     hideLanding();
     matrixEffect();
+    carousel();
 }
 
 function hideLanding(){
@@ -69,7 +70,10 @@ function matrixEffect(){
       $('.mask-matrix').append(divCreate);
       $('.matrix').css({width:'1px',height:'100%'});
       $('.matrix').css({position:'absolute',top:'-100%'});
-      
+      if(createDiv > 9)
+      {
+        $('.matrix').eq(createDiv).addClass('mobile-lines');
+      }
 
     }
 
@@ -81,7 +85,6 @@ function matrixEffect(){
       $(this).addClass('color'+colorAnim);
       $(this).animate({left:leftPos+"%"},0);
       $(this).css({transition:speedAnim+'s'});
-      
       $(this).animate({top:'100%'});
       
     })
@@ -93,6 +96,31 @@ function matrixEffect(){
   },9000);
 }  
 
+// carousel animation
+function carousel(){
+  if(window.innerWidth < 600)
+  {
+    for(pos=0;pos<3;pos++)
+    {
+      $('.car-elem').eq(pos).animate({left:'-200%'},10000);
+    }
+    for(pos=0;pos<3;pos++)
+    {
+      $('.car-elem').eq(pos).animate({left:'0'},10000);
+    }
+    setInterval(function(){
+      for(pos=0;pos<3;pos++)
+      {
+        $('.car-elem').eq(pos).animate({left:'-200%'},10000);
+      }
+      for(pos=0;pos<3;pos++)
+      {
+        $('.car-elem').eq(pos).animate({left:'0'},10000);
+      }
+    },20000);
+  }
+  
+}
 // mouse over animations
 document.addEventListener('mouseover', showUnderline);
 
@@ -149,9 +177,6 @@ document.addEventListener('scroll', function()
     navbar.style.transition = "0.5s";
     navBarMask.style = "transform:translateY(-100%)";
     navBarMask.style.transition = "0.5s";
-    setInterval(function(){
-      carouselElem[0].style = 'transform:translateX(-%)';
-    },2000);
   }
   else
   {

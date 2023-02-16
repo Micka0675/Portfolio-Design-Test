@@ -501,14 +501,22 @@ header{
     font-size: 25px;
 }
 
+
+
 .animation{
-    width: 100%;
+    min-width: 100%;
     height:35vh;
     display: flex;
     justify-content: center;
     align-items: center;
     order:2;
     max-width: none;
+    position: relative;
+}
+
+.car-elem{
+    position: relative;
+    left: 0;
 }
 
 .phone,.tablette,.pc{
@@ -1338,11 +1346,11 @@ footer{
     }
 
     .title-bloc-data{
-        width: 100%;
+        width: 80%;
         font-size: 7vw;
     }
 
-    .txt-anime-data{
+    .txt-anime-data,.txt-anime p{
         width: 100%;
         font-size: 20px;
     }
@@ -1404,23 +1412,26 @@ footer{
         /* overflow-x: hidden; */
         overflow-y:hidden;
         overflow-x: hidden;
-        background-color: brown;
-        display: block;
+        justify-content: space-between;
     }
 
-
-    .phone,.tablette,.pc{
-        width: 100%;
+    .phone,.tablette{
+        min-width: 100%;
         margin: 0;
         position: relative;
         margin-top: 0;
-        background-color: aqua;
     }
 
-    .carroussel-pos{
+    .pc{
+        min-width: 100%;
+        margin: 0;
         position: relative;
-        left:0;
-        
+        margin-top: 0;
+        background-size: 80%;
+    }
+
+    .mobile-lines{
+        display:none;
     }
 }
 
@@ -1430,7 +1441,7 @@ footer{
         width: 600%;
     }
 
-    .txt-anime-data{
+    .txt-anime-data,.txt-anime p{
         font-size: 17px;
     }
 }
@@ -1492,7 +1503,7 @@ footer{
     }
 
     .txt-anime p{
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .bloc-real{
@@ -1540,8 +1551,8 @@ footer{
         width: 900%;
     }
 
-    .txt-anime-data p,.txt-anime p,.title-bloc-data h2,.title-bloc h2.description,.lg-right h2{
-        font-size: 7vw;
+    .txt-anime-data p,.txt-anime p,.title-bloc-data h2,.title-bloc h2.description,.lg-right h2,.txt-anime p{
+        font-size: 6vw;
     }
 }
 
