@@ -102,22 +102,22 @@ function carousel(){
   {
     for(pos=0;pos<3;pos++)
     {
-      $('.car-elem').eq(pos).animate({left:'-200%'},10000);
+      $('.car-elem').eq(pos).animate({left:'-200%'},2000);
     }
     for(pos=0;pos<3;pos++)
     {
-      $('.car-elem').eq(pos).animate({left:'0'},10000);
+      $('.car-elem').eq(pos).animate({left:'0'},2000);
     }
     setInterval(function(){
       for(pos=0;pos<3;pos++)
       {
-        $('.car-elem').eq(pos).animate({left:'-200%'},10000);
+        $('.car-elem').eq(pos).animate({left:'-200%'},2000);
       }
-      for(pos=0;pos<3;pos++)
+      for(pos=3;pos<3;pos++)
       {
-        $('.car-elem').eq(pos).animate({left:'0'},10000);
+        $('.car-elem').eq(pos).animate({left:'0'},2000);
       }
-    },20000);
+    },9000);
   }
   
 }

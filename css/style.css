@@ -499,6 +499,7 @@ header{
 .txt-anime p{
     width: 100%;
     font-size: 25px;
+    text-align: justify;
 }
 
 
@@ -689,6 +690,7 @@ header{
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.596);
     max-width: 80%;
+    text-align: justify;
 }
 
 .txt-anime-data p{
@@ -1496,6 +1498,7 @@ footer{
 
     .description p{
         font-size: 20px;
+        text-align: justify;
     }
 
     .title-bloc h2, .title-real h2,.title-bloc-data h2{
