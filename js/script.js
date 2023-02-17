@@ -102,22 +102,46 @@ function carousel(){
   {
     for(pos=0;pos<3;pos++)
     {
-      $('.car-elem').eq(pos).animate({left:'-200%'},2000);
+      function animateCar(){
+        $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        $('.car-elem').eq(pos).animate({left:'-200%'},1000);
+        $('.car-elem').eq(pos).animate({left:'-200%'},1000);
+      }
+      
+      stop(animateCar);
     }
-    for(pos=0;pos<3;pos++)
+    for(pos=2;pos>=0;pos--)
     {
-      $('.car-elem').eq(pos).animate({left:'0'},2000);
+      function removeCar(){
+        $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        $('.car-elem').eq(pos).animate({left:'0'},1000);
+        $('.car-elem').eq(pos).animate({left:'0'},1000);
+      }
+      stop(removeCar);
     }
     setInterval(function(){
       for(pos=0;pos<3;pos++)
       {
-        $('.car-elem').eq(pos).animate({left:'-200%'},2000);
+        animateCar();
+        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        // $('.car-elem').eq(pos).animate({left:'-200%'},1000);
+        // $('.car-elem').eq(pos).animate({left:'-200%'},1000);
+        stop(animateCar);
       }
-      for(pos=3;pos<3;pos++)
+      for(pos=2;pos>=0;pos--)
       {
-        $('.car-elem').eq(pos).animate({left:'0'},2000);
+        removeCar();
+        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
+        // $('.car-elem').eq(pos).animate({left:'0'},1000);
+        // $('.car-elem').eq(pos).animate({left:'0'},1000);
+        stop(removeCar);
       }
-    },9000);
+      
+    },10000);
   }
   
 }
