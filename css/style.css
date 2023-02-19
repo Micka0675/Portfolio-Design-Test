@@ -299,7 +299,7 @@ header{
 
 .welcome-container{
     width: 500px;
-    
+    overflow-x: hidden;
 }
 
 .welcome{
@@ -846,6 +846,64 @@ header{
     background-image: url("../assets/images/lexique.webp");
 }
 
+/* About me */
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me .title-bloc{
+   order: 0;
+}
+
+.txt-about{
+    width: 80%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.txt-about p{
+    width: 45%;
+    margin-right: 50px;
+    color: #f5deb3;
+    display: flex;
+    align-items: center;
+
+}
+
+.cv-bloc{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cv-bloc a{
+    width: 80%;
+    color: wheat;
+    transition: 0.3s;
+}
+
+.cv-bloc img{
+    width: 100%;
+    border-radius: 25px;
+    border: solid wheat 2px ;
+    transition: 0.3s;
+}
+
+.cv-bloc a:hover{
+    color: rgb(246, 245, 246);
+}
+
+.cv-bloc img:hover{
+    border:solid rgb(253, 105, 7) 2px;
+}
 /* contact */
 .bloc-foot{
     width: 100%;
@@ -945,6 +1003,8 @@ footer{
     align-items: center;
 }
 
+
+
 @media screen and (max-height:800px){
     
     .txt-accueil{
@@ -993,8 +1053,20 @@ footer{
         width: 350px;
     }
 
-
+    .txt-about p {
+        font-size: 20px;
+    }
     
+}
+
+@media screen and (max-height:580px){
+    .cv-bloc img{
+        display: none;
+    }
+
+    .txt-about p {
+        font-size: 60%;
+    }
 }
 
 @media screen and (max-height:323px){
@@ -1221,7 +1293,7 @@ footer{
 
     .text-band > div > p{
         font-size: 28px;
-    };
+    }
 }
 
 @media screen and (min-width:554px) and (max-height:539px){
@@ -1239,7 +1311,7 @@ footer{
 
     .text-band > div > p{
         font-size: 28px;
-    };
+    }
 }
 
 @media screen and (min-height:850px) and (max-width:1420px){
@@ -1271,6 +1343,35 @@ footer{
     
 
 }
+
+
+@media screen and (min-width:1500px){
+    .txt-about{
+        font-size: 185%;
+        text-align: justify;
+    }
+
+
+    .cv-bloc img{
+        max-width: 350px;
+    }
+
+}
+
+@media screen and (min-width:1051px) and (max-width:1500px){
+    .txt-about{
+        font-size: 140%;
+        text-align: justify;
+    }
+
+
+    .cv-bloc img{
+        max-width: 350px;
+    }
+
+}
+
+
 @media screen and (max-width:1051px){
     
 
@@ -1300,6 +1401,12 @@ footer{
         width: 50px;
         height: 50px;
     }
+
+    .cv-bloc{
+        margin-right: 0;
+    }
+
+
 }
 
 @media screen and (max-width:900px)
@@ -1407,11 +1514,39 @@ footer{
     }
 }
 
+@media screen and (max-width : 840px)
+{
+    /* About me */
+
+.txt-about{
+    width: 80%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.txt-about p{
+    margin-bottom: 50px;
+}
+
+.txt-about p,.cv-bloc{
+    width: 100%;
+}
+
+.cv-bloc a{
+    width: 80%;
+    color: wheat;
+    transition: 0.3s;
+}
+
+.cv-bloc img{
+    width: 50%;
+}
+}
+
 @media screen and (max-width:600px)
 {
-    .bloc-anime{
-        overflow-y: none;
-    }
 
     .animation{
         /* overflow-x: hidden; */
@@ -1442,6 +1577,28 @@ footer{
 
     .mobile-lines{
         display:none;
+    }
+
+    .about-me .title-bloc{
+        max-height: 60px;
+        margin-bottom: 50px;
+    }
+
+    .txt-about{
+        width: 80%;
+    }
+
+    .txt-about p{
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .cv-bloc{
+        width: 100%;
+    }
+
+    .cv-bloc a,.cv-bloc img{
+        width: 100%;
     }
 }
 
@@ -1518,7 +1675,7 @@ footer{
     }
 
     .bloc-real{
-        width: 90%;
+        width: 80%;
         height: 350px;
         margin-left: 0;
         margin-right: 0;
