@@ -211,7 +211,7 @@ document.addEventListener('scroll', function()
   //   animateTitleLeft.style = 'transform:translateX(-100%)';
   // }
   if (window.scrollY >= 2*window.innerHeight){
-    blocResp.style.transition = '1s';
+    blocResp.style.transition = '0.5s';
     blocResp.style.backgroundColor = 'wheat';
     animateTitleLeft.style = 'transform:translateX(0%)';
     console.log(limit, window.scrollY);
@@ -228,7 +228,7 @@ document.addEventListener('scroll', function()
     console.log(limit, window.scrollY);
     animatetitle3.style.left = '0';
     animatetitle3.style.color = 'wheat';
-    titleResp.style.transition = '1s';
+    titleResp.style.transition = '0.5s';
     blocResp2.style.backgroundColor = 'black';
     titleResp.style.backgroundColor ='black';
   }
