@@ -61,9 +61,6 @@ function wrapperAppairs(){
 // lines animation
 function matrixEffect(){
   setInterval(function(){
-
-  
-    console.log($('.matrix'));
     
     for(createDiv = 0;createDiv<20;createDiv++)
     {
