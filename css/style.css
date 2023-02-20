@@ -710,7 +710,7 @@ header{
     text-align: left;
     position: relative;
     left: -100%;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 
