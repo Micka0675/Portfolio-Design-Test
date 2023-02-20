@@ -430,6 +430,8 @@ header{
     justify-content: center;
     align-items: center;
     order: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .lg-right h2{
@@ -443,19 +445,11 @@ header{
 }
 
 .title-lg-right{
-    display: none;
-}
-
-.animate-header{
-    animation: showTitleRight 2s forwards;
-    position: relative;
+    position:relative;
+    right: -100%;
     text-align: right;
     color: wheat;
-}
-
-.hide-header{
-    animation: hideTitleRight 2s forwards;
-    position: relative;
+    transition:1s;
 }
 
 /* bloc - anime */
@@ -565,13 +559,9 @@ header{
     width: 80%;
     max-height: 20vh;
     text-align: left;
-    transition :2s;
+    transition :1s;
     color: black;
-}
-
-.animate-header-left{
     position: relative;
-    right:100%;
 }
 
 /* data bloc */
@@ -692,8 +682,6 @@ header{
 }
 
 .txt-anime-data{
-    /* width: 100%;
-    height: 60%; */
     font-size: 25px;
     background-color: rgba(0, 0, 0, 0.596);
     max-width: 80%;
@@ -719,14 +707,16 @@ header{
     font-weight: 900;
     font-size: 50px;
     width: 80%;
-    text-align: center;
+    text-align: left;
+    position: relative;
+    left: -100%;
+    transition: 1s;
 }
 
-.reals-shadow{
-    animation: blocanimeshadow 1s forwards;
-}
+
 
 .reals{
+    
     min-height: calc(100vh - 150px);
     display: flex;
     flex-flow: wrap;
@@ -734,6 +724,8 @@ header{
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    background-color: black;
+    transition: 1s;
 }
 
 .bloc-real{
@@ -787,20 +779,6 @@ header{
 .head-real p, .bot-real p{
     width: 90%;
 }
-
-/* .head-real-alt{
-    width: 100%;
-    height: 50%;
-    background-color: grey;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top:0;
-} */
 
 .bot-real{
     bottom: -100%;
@@ -990,14 +968,6 @@ header{
     position: relative;
     right: -100%; 
     transition:2s
-}
-
-.animate-header-left-2{
-    animation:  removeAnimLeft 1s forwards;
-}
-
-.animate-header-right-2{
-    animation:  removeAnimRight 1s forwards;
 }
 
 footer{
@@ -1873,42 +1843,6 @@ footer{
     100%{top: -50%; right: 15%;}
 }
 
-/* animate h2 */
-
-@keyframes showTitleRight{
-    0%{right:-100%;}
-
-    100%{right:0%;}
-}
-
-@keyframes hideTitleRight{
-    0%{right:0%;}
-    
-    100%{right:-100%;}
-}
-
-/* @keyframes animateHeaderLeft{
-    0%{left:-100%;}
-
-    100%{left:0%;}
-}
-
-@keyframes hideHeaderLeft{
-    0%{left:0%;}
-    
-    100%{left:-100%;}
-} */
-
-@keyframes blocanimereveal{
-    0%{background-color: black;}
-    100%{background-color: wheat;}
-}
-
-@keyframes blocanimeshadow{
-    0%{background-color: wheat;}
-    100%{background-color: black;}
-}
-
 @keyframes headcomes{
     0%{top:-100%;}
     100%{top:0%;}
@@ -1941,73 +1875,4 @@ footer{
         }
 }
 
-@keyframes bggreen{
-    0%{background-color: black;}
-    100%{background-color: green;}
-}
-
-@keyframes bggreentoshad{
-    0%{background-color: green;}
-    100%{background-color: black;}
-}
-
-@keyframes bgred{
-    0%{background-color: black;}
-    100%{background-color: red;}
-}
-
-@keyframes bgredtoshad{
-    0%{background-color: red;}
-    100%{background-color: black;}
-}
-
-@keyframes bgyellow{
-    0%{background-color: black;}
-    100%{background-color: yellow;}
-}
-
-@keyframes bgyellowtoshad{
-    0%{background-color: yellow;}
-    100%{background-color: black;}
-}
-
-@keyframes bgpurple{
-    0%{background-color: black;}
-    100%{background-color: purple;}
-}
-
-@keyframes bgpurpletoshad{
-    0%{background-color: purple;}
-    100%{background-color: black;}
-}
-
-@keyframes bgblue{
-    0%{background-color: black;}
-    100%{background-color: blue;}
-}
-
-@keyframes bgbluetoshad{
-    0%{background-color: blue;}
-    100%{background-color: black;}
-}
-
-@keyframes bgorange{
-    0%{background-color: black;}
-    100%{background-color: orange;}
-}
-
-@keyframes bgorangetoshad{
-    0%{background-color: orange;}
-    100%{background-color: black;}
-}
-
-@keyframes removeAnimLeft{
-    0%{left: 0%;}
-    100%{left: -100%;}
-}
-
-@keyframes removeAnimRight{
-    0%{right: 0%;}
-    100%{right: -100%;}
-}
 

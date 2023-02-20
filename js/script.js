@@ -185,9 +185,8 @@ document.addEventListener('scroll', function()
   }
   if (window.scrollY > window.innerHeight/1.7)
   {
-    titleCreate.style.display = 'block';
-    titleCreate.classList.add('animate-header');
-    titleCreate.classList.remove('hide-header');
+    // titleCreate.style.display = 'block';
+    titleCreate.style.right = "0";
     navbar.style = "transform:translateY(-100%)";
     navbar.style.transition = "0.5s";
     navBarMask.style = "transform:translateY(-100%)";
@@ -195,8 +194,7 @@ document.addEventListener('scroll', function()
   }
   else
   {
-    titleCreate.classList.add('hide-header');
-    titleCreate.classList.remove('animate-header');
+    titleCreate.style = "-100%";
     navbar.style = "transform:translateY(0%)";
     navBarMask.style = "transform:translateY(0%)";
     navBarMask.style.transition = "0.5s";
@@ -213,12 +211,14 @@ document.addEventListener('scroll', function()
   //   animateTitleLeft.style = 'transform:translateX(-100%)';
   // }
   if (window.scrollY >= 2*window.innerHeight){
-    blocResp.classList.add('bloc-anime-reveal');
+    blocResp.style.transition = '1s';
+    blocResp.style.backgroundColor = 'wheat';
     animateTitleLeft.style = 'transform:translateX(0%)';
     console.log(limit, window.scrollY);
   }
   else
   {
+    blocResp.style.backgroundColor = 'black';
     blocResp.classList.remove('bloc-anime-reveal');
     animateTitleLeft.style = 'transform:translateX(-100%)';
   }
@@ -226,12 +226,18 @@ document.addEventListener('scroll', function()
   if(window.scrollY >= 3.7*window.innerHeight)
   {
     console.log(limit, window.scrollY);
-    animatetitle3.classList.add('animate-header');
-    animatetitle3.classList.remove('hide-header');
-    blocResp2.classList.remove('bloc-anime-reveal');
-    blocResp2.classList.add('reals-shadow');
-    titleResp.classList.remove('bloc-anime-reveal');
-    titleResp.classList.add('reals-shadow');
+    animatetitle3.style.left = '0';
+    animatetitle3.style.color = 'wheat';
+    titleResp.style.transition = '1s';
+    blocResp2.style.backgroundColor = 'black';
+    titleResp.style.backgroundColor ='black';
+  }
+  else
+  {
+    animatetitle3.style.left = '-100%';
+    animatetitle3.style.color = 'black';
+    blocResp2.style.backgroundColor = 'wheat';
+    titleResp.style.backgroundColor ='wheat';
   }
   if(window.scrollY >= 4*window.innerHeight)
   {
@@ -261,6 +267,9 @@ document.addEventListener('scroll', function()
   }
 });
 
+
+// realisations animation hover
+
 var rideau = false;
 var illus = false;
 
@@ -277,8 +286,6 @@ for (i = 0; i < blocReal.length; i++ )
             document.getElementsByClassName('head-real')[j].style.animation = 'headcomes 0.8s forwards';
             document.getElementsByClassName('bot-real')[j].style.animation = 'botcomes 0.8s forwards';
             anime[j] = true;
-            // e.target.children[1].classList.add('bot-real-alt');
-            // e.target.children[1].classList.remove('bot-real');
           }
       }
       compteur = 0;
@@ -300,8 +307,6 @@ for (i = 0; i < blocReal.length; i++ )
           
           document.getElementsByClassName('head-real')[j].style.animation = 'headremoves forwards';
           document.getElementsByClassName('bot-real')[j].style.animation = 'botremoves  forwards';
-          // e.target.children[1].classList.add('bot-real-alt');
-          // e.target.children[1].classList.remove('bot-real');
           anime[j] = false;
 
           // document.getElementsByClassName('reals')[0].style.animation = 'none';
