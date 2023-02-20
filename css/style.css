@@ -559,7 +559,7 @@ header{
     width: 80%;
     max-height: 20vh;
     text-align: left;
-    transition :1s;
+    transition :0.5s;
     color: black;
     position: relative;
 }
