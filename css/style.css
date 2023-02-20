@@ -12,7 +12,7 @@ body{
     width: 100%;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     background-color: black;
 }
 
@@ -450,6 +450,7 @@ header{
     animation: showTitleRight 2s forwards;
     position: relative;
     text-align: right;
+    color: wheat;
 }
 
 .hide-header{
@@ -483,6 +484,7 @@ header{
     justify-content: center;
     align-items: center;
     order:1;
+    color:wheat;
 }
 
 .txt-anime{
@@ -513,11 +515,13 @@ header{
     order:2;
     max-width: none;
     position: relative;
+    padding: 10px;
 }
 
 .car-elem{
     position: relative;
     left: 0;
+    
 }
 
 .phone,.tablette,.pc{
@@ -528,6 +532,8 @@ header{
     margin-left: 30px;
     margin-right: 30px;
     height: 100%;
+    filter: drop-shadow(0 1mm 1mm rgb(15, 15, 15));
+    -webkit-filter: drop-shadow(0 1mm 1mm rgb(15, 15, 15));
 }
 
 .phone{
@@ -560,11 +566,12 @@ header{
     max-height: 20vh;
     text-align: left;
     transition :2s;
+    color: black;
 }
 
 .animate-header-left{
     position: relative;
-    right:100%
+    right:100%;
 }
 
 /* data bloc */
@@ -852,6 +859,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: wheat;
 }
 
 .about-me .title-bloc{
@@ -868,7 +876,7 @@ header{
 .txt-about p{
     width: 45%;
     margin-right: 50px;
-    color: #f5deb3;
+    color: black;
     display: flex;
     align-items: center;
 
@@ -886,24 +894,28 @@ header{
 
 .cv-bloc a{
     width: 80%;
-    color: wheat;
+    color: rgb(12, 12, 12);
     transition: 0.3s;
 }
 
 .cv-bloc img{
     width: 100%;
-    border-radius: 25px;
-    border: solid wheat 2px ;
+    border: solid wheat 1px ;
     transition: 0.3s;
+    filter: drop-shadow(0 0 0.75rem rgb(117, 117, 117));
+    -webkit-filter: drop-shadow(0 0 0.75rem rgb(116, 115, 115));
 }
 
 .cv-bloc a:hover{
-    color: rgb(246, 245, 246);
+    color: rgb(71, 70, 70);
 }
 
 .cv-bloc img:hover{
-    border:solid rgb(253, 105, 7) 2px;
+    border:solid rgb(7, 7, 7) 1px;
+    width: 200%;
+    max-width: 400px;
 }
+
 /* contact */
 .bloc-foot{
     width: 100%;
@@ -1451,7 +1463,6 @@ footer{
         width: 100%;
         font-size: 20px;
     }
-
     
     .bloc-contact{
         width: 100%;
@@ -1528,6 +1539,7 @@ footer{
 
 .txt-about p{
     margin-bottom: 50px;
+    font-size: 17px;
 }
 
 .txt-about p,.cv-bloc{
@@ -1536,8 +1548,8 @@ footer{
 
 .cv-bloc a{
     width: 80%;
-    color: wheat;
     transition: 0.3s;
+    margin-bottom: 50px;
 }
 
 .cv-bloc img{
@@ -1599,6 +1611,10 @@ footer{
     }
 
     .cv-bloc a,.cv-bloc img{
+        width: 100%;
+    }
+
+    .cv-bloc img:hover{
         width: 100%;
     }
 }

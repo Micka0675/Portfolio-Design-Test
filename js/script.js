@@ -1,6 +1,8 @@
 var titleCreate = document.getElementById('create');
 var animateTitleLeft = document.getElementById('create2');
 var navBarMask = document.getElementById('maskNavbarBlur');
+var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+  document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 var navbar = document.getElementById('navbar');
 var landing = document.getElementById('landing');
 var blocResp = document.getElementById('blocResp');
@@ -125,19 +127,11 @@ function carousel(){
       for(pos=0;pos<3;pos++)
       {
         animateCar();
-        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
-        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
-        // $('.car-elem').eq(pos).animate({left:'-200%'},1000);
-        // $('.car-elem').eq(pos).animate({left:'-200%'},1000);
         stop(animateCar);
       }
       for(pos=2;pos>=0;pos--)
       {
         removeCar();
-        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
-        // $('.car-elem').eq(pos).animate({left:'-100%'},1000);
-        // $('.car-elem').eq(pos).animate({left:'0'},1000);
-        // $('.car-elem').eq(pos).animate({left:'0'},1000);
         stop(removeCar);
       }
       
@@ -224,7 +218,7 @@ document.addEventListener('scroll', function()
   if (window.scrollY >= 2*window.innerHeight){
     blocResp.classList.add('bloc-anime-reveal');
     animateTitleLeft.style = 'transform:translateX(0%)';
-
+    console.log(limit, window.scrollY);
   }
   else
   {
@@ -234,6 +228,7 @@ document.addEventListener('scroll', function()
 
   if(window.scrollY >= 3.7*window.innerHeight)
   {
+    console.log(limit, window.scrollY);
     animatetitle3.classList.add('animate-header');
     animatetitle3.classList.remove('hide-header');
     blocResp2.classList.remove('bloc-anime-reveal');
@@ -241,17 +236,9 @@ document.addEventListener('scroll', function()
     titleResp.classList.remove('bloc-anime-reveal');
     titleResp.classList.add('reals-shadow');
   }
-  else
-  {
-    animatetitle3.classList.add('hide-header');
-    animatetitle3.classList.remove('animate-header');
-    blocResp2.classList.add('bloc-anime-reveal');
-    blocResp2.classList.remove('reals-shadow');
-    titleResp.classList.add('bloc-anime-reveal');
-    titleResp.classList.remove('reals-shadow');
-  }
   if(window.scrollY >= 4*window.innerHeight)
   {
+    console.log(limit, window.scrollY);
     for(i = 0;i<inputLeft.length;i++)
     {
       inputLeft[i].style = 'transform:translateX(100%)';
@@ -264,6 +251,7 @@ document.addEventListener('scroll', function()
   }
   if(window.scrollY < 3.8*window.innerHeight)
   {
+    
     for(i = 0;i<inputLeft.length;i++)
     {
       inputLeft[i].style = 'transform:translateX(-100%)';
