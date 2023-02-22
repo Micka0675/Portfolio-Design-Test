@@ -38,7 +38,26 @@ lines = document.getElementsByClassName('lines');
 
 // landing
 window.addEventListener('load', animations);
-
+if(window.innerWidth < 960)
+{
+  titleCreate.style.right = "0";
+  animateTitleLeft.style.right = '0';
+  animatetitle3.style.left = '0';
+  animatetitle3.style.color = 'wheat';
+  blocResp.style.backgroundColor = 'wheat';
+  blocResp2.style.backgroundColor = 'black';
+  titleResp.style.backgroundColor ='black';
+    
+  for(i = 0;i<inputLeft.length;i++)
+  {
+    inputLeft[i].style = 'transform:translateX(100%)';
+  }
+  for(i=0;i<inputRight.length;i++)
+  {
+    inputRight[i].style = 'transform:translateX(-100%)';
+  }
+    
+}
 function animations(){
     wrapperAppairs();
     hideLanding();
@@ -182,87 +201,87 @@ document.addEventListener('scroll', function()
     {
       lines[i].style = 'transform: translateX(-100%)';
     }
-  }
+  } 
   if (window.scrollY > window.innerHeight/1.7)
   {
     // titleCreate.style.display = 'block';
-    titleCreate.style.right = "0";
+    
     navbar.style = "transform:translateY(-100%)";
     navbar.style.transition = "0.5s";
     navBarMask.style = "transform:translateY(-100%)";
     navBarMask.style.transition = "0.5s";
+    if(window.innerHeight >960)
+    {
+      titleCreate.style.right = "0";
+    }
   }
   else
   {
-    titleCreate.style = "-100%";
     navbar.style = "transform:translateY(0%)";
     navBarMask.style = "transform:translateY(0%)";
     navBarMask.style.transition = "0.5s";
     navbar.style.transition = "0.5s"
-  }
-  // if (window.scrollY > (2*window.innerHeight)-(window.innerHeight/1.7))
-  // {
-  //   animateTitleLeft.style = 'transform:translateX(0%)';
-    
-
-  // }
-  // else
-  // {
-  //   animateTitleLeft.style = 'transform:translateX(-100%)';
-  // }
-  if (window.scrollY >= 2*window.innerHeight){
-    blocResp.style.transition = '0.5s';
-    blocResp.style.backgroundColor = 'wheat';
-    animateTitleLeft.style = 'transform:translateX(0%)';
-    console.log(limit, window.scrollY);
-  }
-  else
-  {
-    blocResp.style.backgroundColor = 'black';
-    blocResp.classList.remove('bloc-anime-reveal');
-    animateTitleLeft.style = 'transform:translateX(-100%)';
-  }
-
-  if(window.scrollY >= 3.7*window.innerHeight)
-  {
-    console.log(limit, window.scrollY);
-    animatetitle3.style.left = '0';
-    animatetitle3.style.color = 'wheat';
-    titleResp.style.transition = '0.5s';
-    blocResp2.style.backgroundColor = 'black';
-    titleResp.style.backgroundColor ='black';
-  }
-  else
-  {
-    animatetitle3.style.left = '-100%';
-    animatetitle3.style.color = 'black';
-    blocResp2.style.backgroundColor = 'wheat';
-    titleResp.style.backgroundColor ='wheat';
-  }
-  if(window.scrollY >= 4*window.innerHeight)
-  {
-    console.log(limit, window.scrollY);
-    for(i = 0;i<inputLeft.length;i++)
+    if(window.innerHeight >960)
     {
-      inputLeft[i].style = 'transform:translateX(100%)';
-      
-    }
-    for(i=0;i<inputRight.length;i++)
-    {
-      inputRight[i].style = 'transform:translateX(-100%)';
+      titleCreate.style = "-100%";
     }
   }
-  if(window.scrollY < 3.8*window.innerHeight)
+  if(window.innerWidth > 960)
   {
-    
-    for(i = 0;i<inputLeft.length;i++)
-    {
-      inputLeft[i].style = 'transform:translateX(-100%)';
-
+    if (window.scrollY >= 2*window.innerHeight){
+      blocResp.style.transition = '0.5s';
+      blocResp.style.backgroundColor = 'wheat';
+      animateTitleLeft.style = 'transform:translateX(0%)';
+      console.log(limit, window.scrollY);
     }
-    for(i=0;i<inputRight.length;i++)
+    else
     {
-      inputRight[i].style = 'transform:translateX(100%)';
+      blocResp.style.backgroundColor = 'black';
+      blocResp.classList.remove('bloc-anime-reveal');
+      animateTitleLeft.style = 'transform:translateX(-100%)';
+    }
+
+    if(window.scrollY >= 3.7*window.innerHeight)
+    {
+      console.log(limit, window.scrollY);
+      animatetitle3.style.left = '0';
+      animatetitle3.style.color = 'wheat';
+      titleResp.style.transition = '0.5s';
+      blocResp2.style.backgroundColor = 'black';
+      titleResp.style.backgroundColor ='black';
+    }
+    else
+    {
+      animatetitle3.style.left = '-100%';
+      animatetitle3.style.color = 'black';
+      blocResp2.style.backgroundColor = 'wheat';
+      titleResp.style.backgroundColor ='wheat';
+    }
+    if(window.scrollY >= 4*window.innerHeight)
+    {
+      console.log(limit, window.scrollY);
+      for(i = 0;i<inputLeft.length;i++)
+      {
+        inputLeft[i].style = 'transform:translateX(100%)';
+
+      }
+      for(i=0;i<inputRight.length;i++)
+      {
+        inputRight[i].style = 'transform:translateX(-100%)';
+      }
+    }
+    if(window.scrollY < 3.8*window.innerHeight)
+    {
+
+      for(i = 0;i<inputLeft.length;i++)
+      {
+        inputLeft[i].style = 'transform:translateX(-100%)';
+
+      }
+      for(i=0;i<inputRight.length;i++)
+      {
+        inputRight[i].style = 'transform:translateX(100%)';
+      }
     }
   }
 });
