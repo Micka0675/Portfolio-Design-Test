@@ -1559,7 +1559,7 @@ footer{
     }
 
     .pc{
-        background-size: 80%;
+        background-size: contain;
     }
 
     .mobile-lines{
