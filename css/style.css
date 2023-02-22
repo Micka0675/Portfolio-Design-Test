@@ -449,7 +449,7 @@ header{
     right: -100%;
     text-align: right;
     color: wheat;
-    transition:0.5s;
+    transition:1s;
 }
 
 /* bloc - anime */
@@ -548,7 +548,6 @@ header{
     /* -webkit-filter: drop-shadow(0px 15px 15px);
     filter: drop-shadow( 0px 15px 15px); */
     background-image: url('../assets/images/pc.webp');
-    background-size: contain;
 }
 
 .title-bloc h2{
@@ -710,7 +709,7 @@ header{
     text-align: center;
     position: relative;
     left: -100%;
-    transition: 0.5s;
+    transition: 1s;
     margin-bottom: 50px;
 }
 
@@ -749,7 +748,7 @@ header{
     margin-top: 25px;
     margin-bottom:25px ;
     border: solid black 2px;
-    transition: 0.3s;
+    transition: 0.5s;
     overflow: hidden;
 }
 .bloc-real a{
@@ -794,20 +793,6 @@ header{
     color: white;
 }
 
-/* .bot-real-alt{
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    background-color: grey;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-} */
-
 .bloc-real-1{
     background-image: url("../assets/images/f23.webp");
 }
@@ -849,6 +834,12 @@ header{
    order: 0;
 }
 
+.title-about{
+    position: relative;
+    left: -100%;
+    transition: 1s;
+}
+
 .txt-about{
     width: 80%;
     min-height: 70vh;
@@ -883,10 +874,12 @@ header{
 
 .cv-bloc img{
     width: 100%;
-    border: solid wheat 1px ;
-    transition: 0.3s;
+    border: solid wheat 3px ;
+    transition: 1s;
     filter: drop-shadow(0 0 0.75rem rgb(117, 117, 117));
     -webkit-filter: drop-shadow(0 0 0.75rem rgb(116, 115, 115));
+    position: relative;
+    right:-200%
 }
 
 .cv-bloc a:hover{
@@ -894,8 +887,7 @@ header{
 }
 
 .cv-bloc img:hover{
-    border:solid rgb(7, 7, 7) 1px;
-    width: 200%;
+    border:solid rgb(7, 7, 7) 3px;
     max-width: 400px;
 }
 
@@ -920,7 +912,7 @@ header{
 }
 
 .bloc-contact h2{
-    color: white;
+    color: wheat;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
@@ -966,13 +958,13 @@ header{
 .input-comes-left{
     position: relative;
     left:-100%;
-    transition:2s
+    transition:1s
 }
 
 .input-comes-right{
     position: relative;
     right: -100%; 
-    transition:2s
+    transition:1s
 }
 
 footer{

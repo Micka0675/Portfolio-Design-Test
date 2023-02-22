@@ -47,7 +47,8 @@ if(window.innerWidth < 960)
   blocResp.style.backgroundColor = 'wheat';
   blocResp2.style.backgroundColor = 'black';
   titleResp.style.backgroundColor ='black';
-    
+  $("#aboutMe").css({left:'0'});
+  $("#imgCv").css({right:'0'}); 
   for(i = 0;i<inputLeft.length;i++)
   {
     inputLeft[i].style = 'transform:translateX(100%)';
@@ -232,7 +233,6 @@ document.addEventListener('scroll', function()
       blocResp.style.transition = '0.5s';
       blocResp.style.backgroundColor = 'wheat';
       animateTitleLeft.style = 'transform:translateX(0%)';
-      console.log(limit, window.scrollY);
     }
     else
     {
@@ -243,7 +243,6 @@ document.addEventListener('scroll', function()
 
     if(window.scrollY >= 3.7*window.innerHeight)
     {
-      console.log(limit, window.scrollY);
       animatetitle3.style.left = '0';
       animatetitle3.style.color = 'wheat';
       titleResp.style.transition = '0.5s';
@@ -257,9 +256,18 @@ document.addEventListener('scroll', function()
       blocResp2.style.backgroundColor = 'wheat';
       titleResp.style.backgroundColor ='wheat';
     }
-    if(window.scrollY >= 4*window.innerHeight)
+    if(window.scrollY > 5*window.innerHeight)
     {
-      console.log(limit, window.scrollY);
+      $("#aboutMe").css({left:'0'});
+      $("#imgCv").css({right:'0'});
+    }
+    else
+    {
+      $("#aboutMe").css({left:'-100%'});
+      $("#imgCv").css({right:'-200%'});
+    }
+    if(window.scrollY >= 6*window.innerHeight)
+    {
       for(i = 0;i<inputLeft.length;i++)
       {
         inputLeft[i].style = 'transform:translateX(100%)';
@@ -270,19 +278,18 @@ document.addEventListener('scroll', function()
         inputRight[i].style = 'transform:translateX(-100%)';
       }
     }
-    if(window.scrollY < 3.8*window.innerHeight)
+    else
     {
-
       for(i = 0;i<inputLeft.length;i++)
       {
         inputLeft[i].style = 'transform:translateX(-100%)';
-
       }
       for(i=0;i<inputRight.length;i++)
       {
         inputRight[i].style = 'transform:translateX(100%)';
       }
     }
+
   }
 });
 
