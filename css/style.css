@@ -67,6 +67,7 @@ a:visited,a:focus{
 
 .wrapper{
     display: none;
+
 }
 
 /* Header */
@@ -365,14 +366,11 @@ header{
     text-align: center;
 }
 
-
-
 /* main */
 .main{
     width: 100%;
     min-height: 100vh;
     background-color: black;
-    overflow-y: hidden;
     overflow-x: hidden;
     color: aliceblue;
 }
