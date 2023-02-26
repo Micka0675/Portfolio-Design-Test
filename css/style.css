@@ -603,15 +603,6 @@ header{
     border-radius: 12px;
 }
 
-.matrix-down{
-    top: -100%;
-    
-}
-
-.matrix-reset{
-    top: 100%;
-}
-
 .the-one{
     visibility: hidden;
 }
