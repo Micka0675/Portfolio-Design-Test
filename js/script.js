@@ -35,7 +35,7 @@ var lineText = document.getElementsByClassName('underlines');
 lines = document.getElementsByClassName('lines');
 
 // landing
-// window.addEventListener('load', animations);
+window.addEventListener('load', animations);
 // if(window.innerWidth < 960)
 // {
 //   titleCreate.style.right = "0";
@@ -58,23 +58,23 @@ lines = document.getElementsByClassName('lines');
     
 // }
 function animations(){
-    wrapperAppairs();
-    hideLanding();
+    // wrapperAppairs();
+    // hideLanding();
     matrixEffect();
     carousel();
 }
 
-function hideLanding(){
-  setTimeout(function(){
-    landing.style.display = 'none';
-  }, 9000);
-}
+// function hideLanding(){
+//   setTimeout(function(){
+//     landing.style.display = 'none';
+//   }, 9000);
+// }
 
-function wrapperAppairs(){
-  setTimeout(function(){
-    wrapper.style.display = 'block';
-   }, 7000);
-}
+// function wrapperAppairs(){
+//   setTimeout(function(){
+//     wrapper.style.display = 'block';
+//    }, 7000);
+// }
 
 // lines animation
 function matrixEffect(){
