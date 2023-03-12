@@ -36,27 +36,27 @@ lines = document.getElementsByClassName('lines');
 
 // landing
 window.addEventListener('load', animations);
-// if(window.innerWidth < 960)
-// {
-//   titleCreate.style.right = "0";
-//   animateTitleLeft.style.right = '0';
-//   animatetitle3.style.left = '0';
-//   animatetitle3.style.color = 'wheat';
-//   blocResp.style.backgroundColor = 'wheat';
-//   blocResp2.style.backgroundColor = 'black';
-//   titleResp.style.backgroundColor ='black';
-//   $("#aboutMe").css({left:'0'});
-//   $("#imgCv").css({right:'0'}); 
-//   for(i = 0;i<inputLeft.length;i++)
-//   {
-//     inputLeft[i].style = 'transform:translateX(100%)';
-//   }
-//   for(i=0;i<inputRight.length;i++)
-//   {
-//     inputRight[i].style = 'transform:translateX(-100%)';
-//   }
+if(window.innerWidth < 960)
+{
+  titleCreate.style.right = "0";
+  animateTitleLeft.style.right = '0';
+  animatetitle3.style.left = '0';
+  animatetitle3.style.color = 'wheat';
+  blocResp.style.backgroundColor = 'wheat';
+  blocResp2.style.backgroundColor = 'black';
+  titleResp.style.backgroundColor ='black';
+  $("#aboutMe").css({left:'0'});
+  $("#imgCv").css({right:'0'}); 
+  for(i = 0;i<inputLeft.length;i++)
+  {
+    inputLeft[i].style = 'transform:translateX(100%)';
+  }
+  for(i=0;i<inputRight.length;i++)
+  {
+    inputRight[i].style = 'transform:translateX(-100%)';
+  }
     
-// }
+}
 function animations(){
     // wrapperAppairs();
     // hideLanding();
