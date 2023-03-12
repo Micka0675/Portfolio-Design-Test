@@ -4,7 +4,7 @@ var navBarMask = document.getElementById('maskNavbarBlur');
 var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 var navbar = document.getElementById('navbar');
-var landing = document.getElementById('landing');
+// var landing = document.getElementById('landing');
 var blocResp = document.getElementById('blocResp');
 var blocResp2 = document.getElementById('blocResp2');
 var titleResp = document.getElementById('titleResp');
